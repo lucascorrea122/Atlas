@@ -19,10 +19,6 @@ function loadFile(graph) {
   cells.push(codec.decodeCell(elt));
 grafo.model.refresh();
 
-
-
-
-
         elt = elt.nextSibling;
 
       }
