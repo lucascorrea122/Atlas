@@ -40,7 +40,7 @@ function createFeature(name, type) {
             0,
             7,
             7,
-            "port"
+            "PortOptional"
           );
           optional.geometry.offset = new mxPoint(-5, 0);
           optional.geometry.relative = true;
@@ -117,7 +117,7 @@ function createStyles() {
   style[mxConstants.STYLE_RESIZABLE] = false;
   style[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_ELLIPSE;
   style[mxConstants.STYLE_PERIMETER] = mxPerimeter.EllipsePerimeter;
-  grafo.model.getStylesheet().putCellStyle("port", style);
+  grafo.model.getStylesheet().putCellStyle("PortOptional", style);
 }
 
 function checkDuplicateFeature(name) {

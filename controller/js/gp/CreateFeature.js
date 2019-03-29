@@ -128,7 +128,7 @@ function convertVertexToFeature(vertices) {
 function createStyles() {
   var style = new Array();
   style[mxConstants.STYLE_FILLCOLOR] = "transparent";
-  style[mxConstants.STYLE_STROKECOLOR] = "transparent";
+  style[mxConstants.STYLE_STROKECOLOR] = "black";
   style[mxConstants.STYLE_FONTCOLOR] = "black";
   style[mxConstants.STYLE_FONTSIZE] = 15;
   style[mxConstants.STYLE_RESIZABLE] = false;
