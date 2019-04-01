@@ -28,7 +28,7 @@ function createFeature(name, type) {
             7,
             "portMandatory"
           );
-          mandatory.geometry.offset = new mxPoint(-5, 0);
+          mandatory.geometry.offset = new mxPoint(-5, -8);
           mandatory.geometry.relative = true;
           feature = new Feature(vertex);
           grafo.addFeature(feature);
@@ -49,12 +49,12 @@ function createFeature(name, type) {
             vertex.value + "Optinal",
             "",
             0.5,
-            0,
+            -2,
             7,
             7,
             "portOptional"
           );
-          optional.geometry.offset = new mxPoint(-5, 0);
+          optional.geometry.offset = new mxPoint(-5, -8);
           optional.geometry.relative = true;
           feature = new Feature(vertex);
           grafo.addFeature(feature);
