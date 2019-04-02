@@ -1,7 +1,24 @@
+/**
+ * Function: createFeature
+ *
+ * Creates a new Feature with the name and type assigned
+ * in the tool interface. Checks whether the assigned name
+ * is not duplicate or null, if it is not, checks via a Switch
+ * its assigned type.
+ *
+ * Through the type assigned to a Feature, a rectangle is created
+ * that represents the Feature <insertVertex>  and the symbol
+ * representing the Feature type.
+ *
+ * @param name - String that defines the name of the feature
+ * @param type - String tha defines the type of the feature
+ */
+
 function createFeature(name, type) {
   var feature;
   var x;
   var y;
+
 
   if (checkDuplicateFeature(name) && name != "") {
     grafo.model.getModel().beginUpdate();
@@ -28,7 +45,7 @@ function createFeature(name, type) {
             7,
             "portMandatory"
           );
-          mandatory.geometry.offset = new mxPoint(-5, -8);
+          mandatory.geometry.offset = new mxPoint(-5, 0);
           mandatory.geometry.relative = true;
           feature = new Feature(vertex);
           grafo.addFeature(feature);
@@ -54,7 +71,7 @@ function createFeature(name, type) {
             7,
             "portOptional"
           );
-          optional.geometry.offset = new mxPoint(-5, -8);
+          optional.geometry.offset = new mxPoint(-5, 0);
           optional.geometry.relative = true;
           feature = new Feature(vertex);
           grafo.addFeature(feature);

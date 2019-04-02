@@ -2,6 +2,7 @@ function createAssociation(feat1name, feat2name) {
   var features = grafo.getAllFeatures();
   var feat1;
   var feat2;
+  var type;
 
   for (var i = 0; i < features.length; i++) {
     if (features[i].getName() == feat1name) {
@@ -25,7 +26,7 @@ function createAssociation(feat1name, feat2name) {
           feat1.getName() +
           "TO" +
           feat2.getName() +
-          " = grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', feat1.vertex, feat2.vertex,'sourcePort=s;targetPort=n')"
+          "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', feat1.vertex, feat2.vertex, 'sourcePort=s;targetPort=n')"
         );
         eval(
           "Assoc" +
