@@ -7,5 +7,5 @@ The Atlas tool goals can be listed as follows:
 
 * To provide a feature model repository that will serve as a database of pre validated example feature models in various notations, presenting various examples of the commonalities and peculiarities of each supported notation;
 
-* To provide a feature modeling environment that is accessible to inexperienced users, possibly from elds other than software engineering or computer science in general, therefore furthering the adoption of SPL practices
+* To provide a feature modeling environment that is accessible to inexperienced users, possibly from fields other than software engineering or computer science in general, therefore furthering the adoption of SPL practices
 by a wider group of practitioners.
