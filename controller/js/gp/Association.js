@@ -25,16 +25,9 @@ function createAssociation(feat1name, feat2name) {
           "Assoc" +
           feat1.getName() +
           "TO" +
-<<<<<<< Updated upstream
           feat2.getName() +
           "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', feat1.vertex, feat2.vertex, 'sourcePort=s;targetPort=n')"
-=======
-          feat2.getName()+
-            " = grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', feat1.vertex, feat2.vertex,'sourcePort=s;targetPort=n')"
->>>>>>> Stashed changes
         );
-
-
         eval(
           "Assoc" +
           feat1.getName() +

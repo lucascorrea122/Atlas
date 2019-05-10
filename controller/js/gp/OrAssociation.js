@@ -47,3 +47,26 @@ function makeOrAssociation(feature) {
     }
   }
 }
+
+function createStyleOrAssociation() {
+  style[mxConstants.STYLE_FILLCOLOR] = "transparent";
+  style[mxConstants.STYLE_STROKECOLOR] = "black";
+  style[mxConstants.STYLE_FONTCOLOR] = "black";
+  style[mxConstants.STYLE_FONTSIZE] = 15;
+  style[mxConstants.STYLE_RESIZABLE] = false;
+  grafo.model.stylesheet.putCellStyle("mandatory", style);
+  grafo.model.stylesheet.putCellStyle("optional", style);
+  grafo.model.stylesheet.putCellStyle("alternative", style);
+
+  style = new Object();
+  style[mxConstants.STYLE_FILLCOLOR] = "black";
+  style[mxConstants.STYLE_STROKECOLOR] = "black";
+  style[mxConstants.STYLE_FONTCOLOR] = "black";
+  style[mxConstants.STYLE_RESIZABLE] = false;
+  style[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_TRIANGLE;
+  style[mxConstants.STYLE_PERIMETER] = mxPerimeter.EllipsePerimeter;
+  grafo.model.getStylesheet().putCellStyle("portMandatory", style);
+
+
+
+}
