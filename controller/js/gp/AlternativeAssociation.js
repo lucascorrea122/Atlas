@@ -44,6 +44,7 @@ function makeAlternativeAssociation(feature) {
         grafo.organizeGraph();
         grafo.model.getModel().endUpdate();
       }
+        grafo.model.paintVertexShape();
     }
   }
 }
