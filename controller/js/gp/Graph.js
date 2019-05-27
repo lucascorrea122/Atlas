@@ -249,7 +249,7 @@ Graph.prototype.getXml = function () {
   var encoder = new mxCodec();
   var modelName = document.getElementById("modelName").value;
   var node = encoder.encode(grafo.model.getModel());
-
+  console.log(document.getElementById("name"))
   if (modelName == "" || modelName == undefined || modelName == null) {
     alert("Insert the model name!");
   } else {

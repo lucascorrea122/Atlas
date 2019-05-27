@@ -143,10 +143,10 @@
   /*==================================top Bar==================================*/
 
   .topBar {
-      display: inline-block;
+      display: inline;
       position: fixed;
       /*overflow: hidden;*/
-      background-color: #104581;
+      background-color: #014e6b;
       width: 100%;
       height: 66px;
       z-index: 3;
@@ -180,6 +180,7 @@
       font-size: 20px;
       font-weight: bold;
       outline: 0;
+      float: left;
   }
 
   .modelName:focus::-moz-placeholder {

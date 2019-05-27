@@ -20,6 +20,8 @@ function createFeature(name, type) {
   var y;
 
 
+
+
   if (checkDuplicateFeature(name) && name != "") {
     grafo.model.getModel().beginUpdate();
     try {
@@ -45,10 +47,16 @@ function createFeature(name, type) {
             7,
             "portMandatory"
           );
+
+
           mandatory.geometry.offset = new mxPoint(-5, -8);
           mandatory.geometry.relative = true;
+
           feature = new Feature(vertex);
           grafo.addFeature(feature);
+
+
+
           break;
         case "optional":
           var vertex = grafo.model.insertVertex(
@@ -108,7 +116,11 @@ function createFeature(name, type) {
         default:
       }
     } finally {
+      console.log(feature.getVertex().geometry.width);
+      console.log(feature.getVertex().geometry.height);
+
       grafo.model.getModel().endUpdate();
+
     }
     layout.execute(grafo.model.getDefaultParent());
 
@@ -153,14 +165,17 @@ function createStyles() {
   grafo.model.stylesheet.putCellStyle("optional", style);
   grafo.model.stylesheet.putCellStyle("alternative", style);
 
+
   style = new Object();
-  style[mxConstants.STYLE_FILLCOLOR] = "blue";
-  style[mxConstants.STYLE_STROKECOLOR] = "red";
+  style[mxConstants.STYLE_FILLCOLOR] = "black";
+  style[mxConstants.STYLE_STROKECOLOR] = "black";
   style[mxConstants.STYLE_FONTCOLOR] = "black";
   style[mxConstants.STYLE_RESIZABLE] = false;
-  style[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_TRIANGLE;
+  style[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_ELLIPSE;
   style[mxConstants.STYLE_PERIMETER] = mxPerimeter.TrianglePerimeter;
   grafo.model.getStylesheet().putCellStyle("portMandatory", style);
+
+
 
   style = new Object();
   style[mxConstants.STYLE_FILLCOLOR] = "white";
@@ -170,6 +185,8 @@ function createStyles() {
   style[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_ELLIPSE;
   style[mxConstants.STYLE_PERIMETER] = mxPerimeter.EllipsePerimeter;
   grafo.model.getStylesheet().putCellStyle("portOptional", style);
+
+
 }
 
 function checkDuplicateFeature(name) {
@@ -213,3 +230,32 @@ function setY() {
     return 10 + rubberband.graph.view.graphBounds.height;
   }
 }
+
+
+
+
+function draw() {
+  var feature;
+
+
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+    ctx.moveTo(vertex.height/2, vertex.width+2);
+    ctx.lineTo(vertex.height*10, vertex.width+10);
+    ctx.lineTo(vertex.height*20, vertex.width+20);
+    ctx.fill();
+
+    feature = new Feature(ctx);
+    grafo.addFeature(feature);
+
+  }
+
+  grafo.model.getModel().endUpdate();
+
+}
+
+
+

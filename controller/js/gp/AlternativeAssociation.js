@@ -17,14 +17,16 @@ function makeAlternativeAssociation(feature) {
     }
     if (associ.length > 1) {
       grafo.model.getModel().beginUpdate();
+      console.log(associ[0].target.geometry.x);
+      console.log(associ[0].target.geometry.y);
+
       try {
-        draw();
         eval(
           "AlterAssoc" +
             feature.parent[0].value +
             "TO" +
             feature.name +
-             "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', associ[0], associ[associ.length-1],'edgeStyle=roundedStyle;curved=1;strokeColor=red;')"
+             "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', associ[0], associ[associ.length-1],'edgeStyle=roundedStyle;curved=1;strokeColor=red;fill=black;visibility=visible;')"
         );
         eval(
           "AlterAssoc" +
@@ -39,6 +41,10 @@ function makeAlternativeAssociation(feature) {
         grafo.listAssociations = grafo.model
           .getModel()
           .getChildEdges(grafo.model.getDefaultParent());
+
+
+
+
       } finally {
         layout.execute(grafo.model.getDefaultParent());
         grafo.organizeGraph();
@@ -51,16 +57,4 @@ function makeAlternativeAssociation(feature) {
 
 
 
-function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
 
-    // Exemplo de curvas de Bézier quadráticas
-    ctx.beginPath();
-    ctx.moveTo(grafo.model.getDefaultParent(),grafo.model.getDefaultParent());
-    ctx.lineTo(associ[0],associ[0]);
-    ctx.lineTo( associ[associ.length-1], associ[associ.length-1]);
-    ctx.fill();
-  }
-}

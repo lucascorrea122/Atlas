@@ -1,162 +1,173 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<title>Atlas</title>
+    <title>Atlas</title>
 
-	<!--imports the css, icons and fonts-->
-	<link rel="stylesheet" type="text/css" href="../css/myStyle.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
-	 crossorigin="anonymous">
+    <!--imports the css, icons and fonts-->
+    <link rel="stylesheet" type="text/css" href="../css/myStyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
+          integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"
+          integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
+          crossorigin="anonymous">
 
-	<!--defines a global variable-->
-	<script type="text/javascript">
-		mxBasePath = '../controller/mxgraph';
-	</script>
+    <!--defines a global variable-->
+    <script type="text/javascript">
+        mxBasePath = '../controller/mxgraph';
+    </script>
 
-	<!--gps specifics imports-->
-	<script src="../controller/js/gp/LoadXml.js"></script>
-	<script src="../controller/js/gp/ValidationScript.js"></script>
-	<script src="../controller/js/gp/Feature.js"></script>
-	<script src="../controller/js/gp/Graph.js"></script>
-	<script src="../controller/js/gp/Association.js"></script>
-	<script src="../controller/js/gp/CreateFeature.js"></script>
-	<script src="../controller/js/gp/AlternativeAssociation.js"></script>
-	<script src="../controller/js/gp/ChangeType.js"></script>
+    <!--gps specifics imports-->
+    <script src="../controller/js/gp/LoadXml.js"></script>
+    <script src="../controller/js/gp/ValidationScript.js"></script>
+    <script src="../controller/js/gp/Feature.js"></script>
+    <script src="../controller/js/gp/Graph.js"></script>
+    <script src="../controller/js/gp/Association.js"></script>
+    <script src="../controller/js/gp/CreateFeature.js"></script>
+    <script src="../controller/js/gp/AlternativeAssociation.js"></script>
+    <script src="../controller/js/gp/ChangeType.js"></script>
 
-	<!--general imports-->
-	<script src="../controller/js/FunctionBezierCurve.js"></script>
-	<script src="../controller/js/Modal.js"></script>
-	<script src="../controller/js/AdjustCanvas.js"></script>
-	<script src="../controller/js/Download.js"></script>
-	<script src="../controller/js/SavePng.js"></script>
-	<script src="../controller/js/FunctionsCanvas.js"></script>
+    <!--general imports-->
+    <script src="../controller/js/FunctionBezierCurve.js"></script>
+    <script src="../controller/js/Modal.js"></script>
+    <script src="../controller/js/AdjustCanvas.js"></script>
+    <script src="../controller/js/Download.js"></script>
+    <script src="../controller/js/SavePng.js"></script>
+    <script src="../controller/js/FunctionsCanvas.js"></script>
 
-	<!--mxgraphs specifics imports-->
-	<script src="../controller/mxgraph/mxClient.js"></script>
+    <!--mxgraphs specifics imports-->
+    <script src="../controller/mxgraph/mxClient.js"></script>
 
 </head>
 
 <body onload="main(document.getElementById('graphContainer'))">
-	<!--Top Bar-->
-	<div class="topBar">
-		<input id="modelName" class="modelName" type="text" placeholder="Model name">
-		<div class="topBarIconGroup" id="topBarIconGroup">
-			<a onclick="grafo.undoFunction()" href="javascript:void(0);">
-				<span class="tooltip">Undo</span>
-				<i class="fas fa-undo"></i> </a>
-			<a onclick="grafo.redoFunction()" href="javascript:void(0);">
-				<span class="tooltip">Redo</span>
-				<i class="fas fa-redo"></i> </a>
-			<a onclick="grafo.clearGraph()" href="javascript:void(0);">
-				<span class="tooltip">Create Model</span>
-				<i class="fa fa-file"></i> </a>
-			<a onclick="createLoadModalButtonClick()" href="javascript:void(0);">
-				<span class="tooltip">Load Model</span>
-				<i class="fa fa-upload"></i> </a>
-			<a onclick="grafo.getXml()" href="javascript:void(0);">
-				<span class="tooltip">Save as .xml</span>
-				<i class="fa fa-save"></i> </a>
-			<a onclick="show()" href="javascript:void(0)">
-				<span class="tooltip">Print</span>
-				<i class="fa fa-print"></i> </a>
-		</div>
-	</div>
+<!--Top Bar-->
+<div class="topBar">
+    <div class="topBarIconGroup" id="topBarIconGroup">
+        <a onclick="grafo.undoFunction()" href="javascript:void(0);">
+            <span class="tooltip">Undo</span>
+            <i class="fas fa-list"></i> </a>
+        <a onclick="grafo.undoFunction()" href="javascript:void(0);">
+            <span class="tooltip">Undo</span>
+            <i class="fas fa-undo"></i> </a>
+        <a onclick="grafo.redoFunction()" href="javascript:void(0);">
+            <span class="tooltip">Redo</span>
+            <i class="fas fa-redo"></i> </a>
+        <a onclick="grafo.clearGraph()" href="javascript:void(0);">
+            <span class="tooltip">Create Model</span>
+            <i class="fa fa-file"></i> </a>
+        <a onclick="createLoadModalButtonClick()" href="javascript:void(0);">
+            <span class="tooltip">Load Model</span>
+            <i class="fa fa-upload"></i> </a>
+        <a onclick="grafo.getXml()" href="javascript:void(0);">
+            <span class="tooltip">Save as .xml</span>
+            <i class="fa fa-save"></i> </a>
+        <a onclick="show()" href="javascript:void(0)">
+            <span class="tooltip">Print</span>
+            <i class="fa fa-print"></i> </a>
+    </div>
+    <input id="modelName" class="modelName" type="text" placeholder="Model name">
+
+</div>
 
 
-	<!--Top Bar Small Screen < 600 width-->
-	<div class="topBarIconGroupSmall" id="topBarIconGroupSmall">
-		<a onclick="grafo.undoFunction()" href="javascript:void(0);">
-			<span class="tooltip">Undo</span>
-			<i class="fas fa-undo"></i> </a>
-		<a onclick="grafo.redoFunction()" href="javascript:void(0);">
-			<span class="tooltip">Redo</span>
-			<i class="fas fa-redo"></i> </a>
-		<a onclick="createLoadModalButtonClick()" href="javascript:void(0);">
-			<span class="tooltip">Load Model</span>
-			<i class="fa fa-upload"></i> </a>
-		<a onclick="grafo.getXml()" href="javascript:void(0);">
-			<span class="tooltip">Save as .xml</span>
-			<i class="fa fa-save"></i> </a>
-		<a onclick="show()" href="javascript:void(0)">
-			<span class="tooltip">Print</span>
-			<i class="fa fa-print"></i> </a>
-	</div>
+<!--Top Bar Small Screen < 600 width-->
+<div class="topBarIconGroupSmall" id="topBarIconGroupSmall">
+    <a onclick="grafo.undoFunction()" href="javascript:void(0);">
+        <span class="tooltip">Undo</span>
+        <i class="fas fa-undo"></i> </a>
+    <a onclick="grafo.redoFunction()" href="javascript:void(0);">
+        <span class="tooltip">Redo</span>
+        <i class="fas fa-redo"></i> </a>
+    <a onclick="createLoadModalButtonClick()" href="javascript:void(0);">
+        <span class="tooltip">Load Model</span>
+        <i class="fa fa-upload"></i> </a>
+    <a onclick="grafo.getXml()" href="javascript:void(0);">
+        <span class="tooltip">Save as .xml</span>
+        <i class="fa fa-save"></i> </a>
+    <a onclick="show()" href="javascript:void(0)">
+        <span class="tooltip">Print</span>
+        <i class="fa fa-print"></i> </a>
+</div>
 
-	<!--Side Bar-->
-	<div class="sideBar">
-		<div class="sideBarIconGroup">
-			<a onclick="showPopUp(modalFeature);" href="javascript:void(0);">
-				<span class="tooltip">Create Feature</span>
-				<i class="fas fa-plus-square"></i></a>
-			<a onclick="showPopUp(modalAssociation);" href="javascript:void(0);">
-				<span class="tooltip">Create Association</span>
-				<i class="fas fa-arrows-alt-v"></i></a>
-			<a onclick="validateModel()" href="javascript:void(0);">
-				<span class="tooltip">Check Model</span>
-				<i class="fa fa-check"></i></a>
+<!--Side Bar-->
+<div class="sideBar">
+    <div class="sideBarIconGroup">
+        <a onclick="showPopUp(modalFeature);" href="javascript:void(0);">
+            <span class="tooltip">Create Feature</span>
+            <i class="fas fa-plus-square"></i></a>
+        <a onclick="showPopUp(modalAssociation);" href="javascript:void(0);">
+            <span class="tooltip">Create Association</span>
+            <i class="fas fa-arrows-alt-v"></i></a>
+        <a onclick="validateModel()" href="javascript:void(0);">
+            <span class="tooltip">Check Model</span>
+            <i class="fa fa-check"></i></a>
 
-		</div>
-	</div>
+    </div>
+</div>
 
-	<!--Create Feature Modal-->
-	<div class="modal" id="modalFeature">
-		<div id="featureModalContent" class="featureModalContent">
-			<div class="closeButton">
-				<a onclick="closePopUp(modalFeature);" href="javascript:void(0);"><i class="fa fa-times"></i></a>
-			</div>
-			<label><b>Feature Name</b></label>
-			<input id="featureName2" type="text" name="Fname" value="">
-			<label><b>Feature type</b></label>
-			<select id="featureType2">
-				<option value="mandatory">Mandatory</option>
-				<option value="optional">Optional</option>
-				<option value="alternative">Alternative</option>
-			</select>
-			<button id="createFeatureSubmitButton" onclick="createFeature(featureName2.value,featureType2.value)" type="submit">Create</button>
-		</div>
-	</div>
+<!--Create Feature Modal-->
+<div class="modal" id="modalFeature">
+    <div id="featureModalContent" class="featureModalContent">
+        <div class="closeButton">
+            <a onclick="closePopUp(modalFeature);" href="javascript:void(0);"><i class="fa fa-times"></i></a>
+        </div>
+        <label><b>Feature Name</b></label>
+        <input id="featureName2" type="text" name="Fname" value="">
+        <label><b>Feature type</b></label>
+        <select id="featureType2">
+            <option value="mandatory">Mandatory</option>
+            <option value="optional">Optional</option>
+            <option value="alternative">Alternative</option>
+        </select>
+        <button id="createFeatureSubmitButton" onclick="createFeature(featureName2.value,featureType2.value)"
+                type="submit">Create
+        </button>
+    </div>
+</div>
 
-	<!--Create Association Modal-->
-	<div class="modal" id="modalAssociation">
-		<div id="associationModalContent" class="associationModalContent">
-			<div class="closeButton">
-				<a onclick="closePopUp(modalAssociation);" href="javascript:void(0);"><i class="fa fa-times"></i></a>
-			</div>
-			<label><b>Parent Feature</b></label>
-			<select id="feature1id2" onchange="grafo.setSelectBoxChild()"></select>
-			<label><b>Child Feature</b></label>
-			<select id="feature2id2"></select>
-			<button id="createAssociationSubmitButton" onclick="grafo.createAssociation(feature1id2.value,feature2id2.value)"
-			 type="submit">Create</button>
-		</div>
-	</div>
+<!--Create Association Modal-->
+<div class="modal" id="modalAssociation">
+    <div id="associationModalContent" class="associationModalContent">
+        <div class="closeButton">
+            <a onclick="closePopUp(modalAssociation);" href="javascript:void(0);"><i class="fa fa-times"></i></a>
+        </div>
+        <label><b>Parent Feature</b></label>
+        <select id="feature1id2" onchange="grafo.setSelectBoxChild()"></select>
+        <label><b>Child Feature</b></label>
+        <select id="feature2id2"></select>
+        <button id="createAssociationSubmitButton"
+                onclick="grafo.createAssociation(feature1id2.value,feature2id2.value)"
+                type="submit">Create
+        </button>
+    </div>
+</div>
 
-	<!--Load File Modal-->
-	<div class="modal" id="loadFileModal">
-		<div id="loadFileModalContent" class="loadFileModalContent">
-			<div class="closeButton"> <a onclick="closePopUp(loadFileModal);" href="javascript:void(0);"><i class="fa fa-times"></i></a><br />
-			</div>
-			<label><b>Select File</b></label><br />
-			<input id="fileInput" type="file" accept=".xml" value="select"><br />
-			<button id="loadFileSubmitButton" onclick="loadFile(grafo.model)" type="submit">Import</button>
-		</div>
-	</div>
+<!--Load File Modal-->
+<div class="modal" id="loadFileModal">
+    <div id="loadFileModalContent" class="loadFileModalContent">
+        <div class="closeButton"><a onclick="closePopUp(loadFileModal);" href="javascript:void(0);"><i
+                class="fa fa-times"></i></a><br/>
+        </div>
+        <label><b>Select File</b></label><br/>
+        <input id="fileInput" type="file" accept=".xml" value="select"><br/>
+        <button id="loadFileSubmitButton" onclick="loadFile(grafo.model)" type="submit">Import</button>
+    </div>
+</div>
 
-	<!--Canvas-->
-	<div class="canvas" id="canvas">
-		<div id="graphContainer">
+<!--Canvas-->
+<div class="canvas" id="canvas">
+    <div id="graphContainer">
 
-		</div>
+    </div>
 
 
-	</div>
+</div>
 
 </body>
 

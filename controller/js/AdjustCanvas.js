@@ -13,7 +13,7 @@ function adjustSizes() {
   canvas.style.height = canvasHeight + "px";
 
   //  center model name input text
-  modelName.style.marginLeft = width / 2 - modelName.clientWidth / 2 + "px";
+  //modelName.style.marginLeft = width / 2 - modelName.clientWidth / 2 + "px";
 
   if (width <= 600) {
     // topBarIcons.style.display = "block";
