@@ -17,6 +17,7 @@
           integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
           crossorigin="anonymous">
 
+
     <!--defines a global variable-->
     <script type="text/javascript">
         mxBasePath = '../controller/mxgraph';
@@ -49,18 +50,18 @@
 <!--Top Bar-->
 <div class="topBar">
     <div class="topBarIconGroup" id="topBarIconGroup">
-        <a onclick="grafo.undoFunction()" href="javascript:void(0);">
-            <span class="tooltip">Undo</span>
-            <i class="fas fa-list"></i> </a>
+        <a onclick="grafo.clearGraph()" href="javascript:void(0);">
+            <span class="tooltip">Create Model</span>
+            <i class="fa fa-file"></i> </a>
+        <!--        <a onclick="" href="javascript:void(0);">-->
+        <!--            <span class="tooltip">Functions</span>-->
+        <!--            <i class="fas fa-list"></i> </a>-->
         <a onclick="grafo.undoFunction()" href="javascript:void(0);">
             <span class="tooltip">Undo</span>
             <i class="fas fa-undo"></i> </a>
         <a onclick="grafo.redoFunction()" href="javascript:void(0);">
             <span class="tooltip">Redo</span>
             <i class="fas fa-redo"></i> </a>
-        <a onclick="grafo.clearGraph()" href="javascript:void(0);">
-            <span class="tooltip">Create Model</span>
-            <i class="fa fa-file"></i> </a>
         <a onclick="createLoadModalButtonClick()" href="javascript:void(0);">
             <span class="tooltip">Load Model</span>
             <i class="fa fa-upload"></i> </a>
@@ -72,6 +73,18 @@
             <i class="fa fa-print"></i> </a>
     </div>
     <input id="modelName" class="modelName" type="text" placeholder="Model name">
+    <ul class="menu topBarIconGroup topBar">
+        <li><a href="#">
+            <span class="tooltip">Functions</span>
+            <i class="fas fa-list"></i> </a>
+            </a>
+            <ul>
+                <a href="#">Web Design</a>
+                <a href="#">SEO</a>
+                <a href="#">Design</a>
+            </ul>
+        </li>
+    </ul>
 
 </div>
 
