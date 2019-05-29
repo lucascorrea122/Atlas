@@ -15,7 +15,7 @@
  */
 
 function createFeature(name, type) {
-  var feature;
+  var feature, feature2;
   var x;
   var y;
 
@@ -36,7 +36,12 @@ function createFeature(name, type) {
             80,
             30,
             "mandatory"
-          );
+        );
+
+
+
+
+
           var mandatory = grafo.model.insertVertex(
             vertex,
             vertex.value + "Mandatory",
@@ -47,13 +52,13 @@ function createFeature(name, type) {
             7,
             "portMandatory"
           );
-
-
           mandatory.geometry.offset = new mxPoint(-5, -8);
           mandatory.geometry.relative = true;
-
           feature = new Feature(vertex);
+
           grafo.addFeature(feature);
+
+
 
 
 
@@ -98,20 +103,7 @@ function createFeature(name, type) {
           feature = new Feature(vertex);
           grafo.addFeature(feature);
           break;
-          case "or":
-          var vertex = grafo.model.insertVertex(
-            grafo.model.getDefaultParent(),
-            name,
-            name,
-            10,
-            setY(),
-            80,
-            30,
-            "or"
-          );
-          feature = new Feature(vertex);
-          grafo.addFeature(feature);
-          break;
+
 
         default:
       }
@@ -129,6 +121,12 @@ function createFeature(name, type) {
   } else {
     alert("Name Invalid or Duplicated!!");
   }
+
+
+
+
+
+
 }
 
 function convertVertexToFeature(vertices) {
@@ -174,6 +172,16 @@ function createStyles() {
   style[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_ELLIPSE;
   style[mxConstants.STYLE_PERIMETER] = mxPerimeter.TrianglePerimeter;
   grafo.model.getStylesheet().putCellStyle("portMandatory", style);
+
+
+  style = new Object();
+  style[mxConstants.STYLE_FILLCOLOR] = "black";
+  style[mxConstants.STYLE_STROKECOLOR] = "black";
+  style[mxConstants.STYLE_FONTCOLOR] = "black";
+  style[mxConstants.STYLE_RESIZABLE] = false;
+  style[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_TRIANGLE;
+  style[mxConstants.STYLE_PERIMETER] = mxPerimeter.TrianglePerimeter;
+  grafo.model.getStylesheet().putCellStyle("triangle", style);
 
 
 
@@ -235,26 +243,18 @@ function setY() {
 
 
 function draw() {
-  var feature;
-
-
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
 
-    ctx.beginPath();
-    ctx.moveTo(vertex.height/2, vertex.width+2);
-    ctx.lineTo(vertex.height*10, vertex.width+10);
-    ctx.lineTo(vertex.height*20, vertex.width+20);
-    ctx.fill();
+    ctx.fillRect(25, 25, 100, 100);
+    ctx.clearRect(45, 45, 60, 60);
+    ctx.strokeRect(50, 50, 50, 50);
 
     feature = new Feature(ctx);
     grafo.addFeature(feature);
 
   }
-
-  grafo.model.getModel().endUpdate();
-
 }
 
 

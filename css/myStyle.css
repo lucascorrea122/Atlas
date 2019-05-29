@@ -1,45 +1,11 @@
-.menu topBarIconGroup topBar{
-
-
-}
-
-.menu li{
-    position:relative;
-    float:left;
-}
-
-.menu  a{
-    color: #fff;
+.navbar{
+    background-color: #6c31ff;
 
 }
 
-.menu ul a{
-    color: #000000;
+.dropdown-menu a{
+   font-size: 30px;
 
-}
-
-.menu li a:hover {
-    /*background:#333;*/
-    /*color: #1d8bff;*/
-    -moz-box-shadow:0 3px 10px 0 #CCC;
-    -webkit-box-shadow:0 3px 10px 0 #ccc;
-    text-shadow:0px 0px 5px #fff;
-}
-
-.menu li ul{
-    position:absolute;
-
-    /*background-color: #ff7df3;*/
-    display:none;
-}
-
-.menu li:hover ul, .menu li.over ul{
-    display:block;
-
-}
-
-.menu li ul li{
-    width:auto;
 }
 
 /*==================================generic==================================*/
@@ -404,3 +370,4 @@
       border-style: solid;
       border-color: transparent #104581 transparent transparent;
   }
+

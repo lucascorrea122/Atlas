@@ -4,6 +4,9 @@ function Graph(model) {
   this.listAssociations = [];
 }
 
+
+
+
 Graph.prototype.setModel = function (model) {
   this.model = model;
 };
@@ -268,3 +271,8 @@ Graph.prototype.clearGraph = function () {
   grafo.listFeatures = [];
   grafo.listAssociations = [];
 };
+
+
+Graph.prototype.insertORalternative = function (child, alternatives) {
+
+}

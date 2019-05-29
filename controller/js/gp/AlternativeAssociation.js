@@ -1,4 +1,7 @@
 function makeAlternativeAssociation(feature) {
+
+
+
   var associ = [];
   if (feature.parent.length != 0) {
     for (var i = 0; i < grafo.listAssociations.length; i++) {
@@ -7,6 +10,7 @@ function makeAlternativeAssociation(feature) {
         grafo.listAssociations[i].target.style == "alternative"
       ) {
         associ.push(grafo.listAssociations[i]);
+
       }
       if (
         grafo.listAssociations[i].id.indexOf("Link") != -1 &&
@@ -26,7 +30,7 @@ function makeAlternativeAssociation(feature) {
             feature.parent[0].value +
             "TO" +
             feature.name +
-             "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', associ[0], associ[associ.length-1],'edgeStyle=roundedStyle;curved=1;strokeColor=red;fill=black;visibility=visible;')"
+             "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', associ[0], associ[associ.length-1],'edgeStyle=roundedStyle;strokeColor=red;curved=1;')"
         );
         eval(
           "AlterAssoc" +
