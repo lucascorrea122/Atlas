@@ -17,6 +17,24 @@
           integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
           crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
 
     <!--defines a global variable-->
     <script type="text/javascript">
@@ -49,27 +67,63 @@
 <body onload="main(document.getElementById('graphContainer'))">
 <!--Top Bar-->
 <div class="topBar">
-    <input id="modelName" class="modelName" type="text" placeholder="Model name">
+
     <div class="topBarIconGroup" id="topBarIconGroup">
-        <a onclick="grafo.clearGraph()" href="javascript:void(0);">
-            <span class="tooltip">Create Model</span>
-            <i class="fa fa-file"></i> </a>
-        <a onclick="grafo.undoFunction()" href="javascript:void(0);">
-            <span class="tooltip">Undo</span>
-            <i class="fas fa-undo"></i> </a>
-        <a onclick="grafo.redoFunction()" href="javascript:void(0);">
-            <span class="tooltip">Redo</span>
-            <i class="fas fa-redo"></i> </a>
-        <a onclick="createLoadModalButtonClick()" href="javascript:void(0);">
-            <span class="tooltip">Load Model</span>
-            <i class="fa fa-upload"></i> </a>
-        <a onclick="grafo.getXml()" href="javascript:void(0);">
-            <span class="tooltip">Save as .xml</span>
-            <i class="fa fa-save"></i> </a>
-        <a onclick="show()" href="javascript:void(0)">
-            <span class="tooltip">Print</span>
-            <i class="fa fa-print"></i> </a>
+
+        <li>
+            <a onclick="grafo.clearGraph()" href="javascript:void(0);">
+                <span class="tooltip">Create Model</span>
+                <i class="fas fa-file"></i> </a>
+
+        </li>
+
+        <li class="iconsTopBar nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTools" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                <span class="tooltip">Create Model</span>
+                <i class="fa fa-tools"></i> </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownTools">
+                <a onclick="showPopUp(modalFeature);" href="javascript:void(0);">
+                    <span class="tooltip">Create Feature</span>
+                    <i class="fas fa-plus-square"></i></a>
+                <a onclick="showPopUp(modalAssociation);" href="javascript:void(0);">
+                    <span class="tooltip">Create Association</span>
+                    <i class="fas fa-arrows-alt-v"></i></a>
+            </div>
+        </li>
+
+
+        <li class="iconsTopBar nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFunctions" role="button"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                <span class="tooltip">Create Model</span>
+                <i class="fa fa-list"></i> </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownFunctions">
+                <a onclick="grafo.getXml()" href="javascript:void(0);"> <span class="tooltip">Save as .xml</span> <i
+                        class="fa fa-save"></i> </a>
+                <a onclick="createLoadModalButtonClick()" href="javascript:void(0);"> <span
+                        class="tooltip">Load Model</span> <i class="fa fa-upload"></i> </a>
+                <a onclick="show()" href="javascript:void(0)"> <span class="tooltip">Print</span> <i
+                        class="fa fa-print"></i> </a>
+                <a onclick="validateModel()" href="javascript:void(0);">
+                    <span class="tooltip">Check Model</span>
+                    <i class="fa fa-check"></i></a>
+            </div>
+        </li>
+
+        <li>
+            <a onclick="grafo.undoFunction()" href="javascript:void(0);">
+                <span class="tooltip">Undo</span>
+                <i class="fas fa-undo"></i> </a>
+            <a onclick="grafo.redoFunction()" href="javascript:void(0);">
+                <span class="tooltip">Redo</span>
+                <i class="fas fa-redo"></i> </a>
+        </li>
     </div>
+    <li>
+        <input id="modelName" class="modelName" type="text" placeholder="Model name">
+    </li>
 </div>
 
 
@@ -93,20 +147,12 @@
 </div>
 
 <!--Side Bar-->
-<div class="sideBar">
-    <div class="sideBarIconGroup">
-        <a onclick="showPopUp(modalFeature);" href="javascript:void(0);">
-            <span class="tooltip">Create Feature</span>
-            <i class="fas fa-plus-square"></i></a>
-        <a onclick="showPopUp(modalAssociation);" href="javascript:void(0);">
-            <span class="tooltip">Create Association</span>
-            <i class="fas fa-arrows-alt-v"></i></a>
-        <a onclick="validateModel()" href="javascript:void(0);">
-            <span class="tooltip">Check Model</span>
-            <i class="fa fa-check"></i></a>
+<!--<div class="sideBar">-->
+<!--    <div class="sideBarIconGroup">-->
 
-    </div>
-</div>
+
+<!--    </div>-->
+<!--</div>-->
 
 <!--Create Feature Modal-->
 <div class="modal" id="modalFeature">

@@ -39,6 +39,7 @@
   }
 
 
+
   /*==================================Feature==================================*/
 
   .featureModalContent {
@@ -178,7 +179,7 @@
   }
 
   .topBarIconGroup a:hover {
-      background-color: #222222;
+      background-color: #aaaaaa;
   }
 
   .modelName {
@@ -207,6 +208,19 @@
   .modelName:focus:-ms-input-placeholder {
       color: transparent;
   }
+
+  /*.iconsTopBar .li{*/
+  /*    display: inline-block;*/
+
+  /*}*/
+    li{
+        display: inline;
+    }
+
+    .dropdown-menu{
+        background-color: red;
+
+    }
 
 
   /*==================================topBarSmall=====================================*/
