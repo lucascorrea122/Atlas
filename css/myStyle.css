@@ -158,7 +158,7 @@
       display: inline;
       position: fixed;
       /*overflow: hidden;*/
-      background-color: #014e6b;
+      background-color: #010000;
       width: 100%;
       height: 66px;
       z-index: 3;
@@ -177,10 +177,12 @@
       display: inline-block;
       text-align: center;
       vertical-align: middle;
+      color: white;
   }
 
   .topBarIconGroup a:hover {
       background-color: #aaaaaa;
+      color: #ff4f2a;
   }
 
   .modelName {
@@ -210,18 +212,18 @@
       color: transparent;
   }
 
-  /*.iconsTopBar .li{*/
-  /*    display: inline-block;*/
+  .iconsTopBar .li{
+      display: inline-block;
 
-  /*}*/
-    li{
+  }
+
+  li{
         display: inline;
     }
 
-    .dropdown-menu{
-        background-color: red;
-
-    }
+   .color{
+      color: black;
+  }
 
 
   /*==================================topBarSmall=====================================*/
