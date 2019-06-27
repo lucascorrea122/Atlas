@@ -170,15 +170,20 @@
       list-style:none;
   }
 
+ .topBarIconGroup .dropdown-menu a{
+      color: #0b2e13;
 
+  }
 
   .topBarIconGroup a {
       font-size: 30px;
       display: inline-block;
       text-align: center;
       vertical-align: middle;
-      color: white;
+      color: #fefffd;
   }
+
+
 
   .topBarIconGroup a:hover {
       background-color: #aaaaaa;
