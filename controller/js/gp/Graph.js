@@ -83,6 +83,7 @@ Graph.prototype.organizeGraph = function () {
   layout.groupPadding = 100;
   layout.visited = true;
 
+
   grafo.setSelectBoxParent();
   grafo.setSelectBoxChild();
 };
