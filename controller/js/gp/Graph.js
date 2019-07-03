@@ -274,7 +274,7 @@ Graph.prototype.clearGraph = function () {
   grafo.listAssociations = [];
 };
 
-
-Graph.prototype.insertORalternative = function (child, alternatives) {
-
-}
+//
+// Graph.prototype.insertORalternative = function (child, alternatives) {
+//
+// }
