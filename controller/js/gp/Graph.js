@@ -75,6 +75,7 @@ Graph.prototype.getFeatureNames = function () {
   return result;
 };
 
+
 Graph.prototype.organizeGraph = function () {
   layout.useBoundingBox = false;
   layout.edgeRouting = false;
