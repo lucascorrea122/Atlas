@@ -38,10 +38,6 @@ function createFeature(name, type) {
             "mandatory"
         );
 
-
-
-
-
           var mandatory = grafo.model.insertVertex(
             vertex,
             vertex.value + "Mandatory",
@@ -55,15 +51,10 @@ function createFeature(name, type) {
           mandatory.geometry.offset = new mxPoint(-5, -8);
           mandatory.geometry.relative = true;
           feature = new Feature(vertex);
-
           grafo.addFeature(feature);
-
-
-
-
-
           break;
-        case "optional":
+
+          case "optional":
           var vertex = grafo.model.insertVertex(
             grafo.model.getDefaultParent(),
             name,
@@ -89,7 +80,8 @@ function createFeature(name, type) {
           feature = new Feature(vertex);
           grafo.addFeature(feature);
           break;
-        case "alternative":
+
+          case "alternative":
           var vertex = grafo.model.insertVertex(
             grafo.model.getDefaultParent(),
             name,
@@ -115,7 +107,6 @@ function createFeature(name, type) {
 
     }
     layout.execute(grafo.model.getDefaultParent());
-
     grafo.organizeGraph();
     document.getElementById("modalFeature").style.display = "none";
   } else {
@@ -253,6 +244,7 @@ function draw() {
 
     feature = new Feature(ctx);
     grafo.addFeature(feature);
+    grafo.organizeGraph();
 
   }
 }

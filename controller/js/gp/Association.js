@@ -28,10 +28,8 @@ function createAssociation(feat1name, feat2name) {
 
           feat2.getName() +
           "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', feat1.vertex, feat2.vertex, 'sourcePort=s;targetPort=n')"
-
-
-
         );
+
         eval(
           "Assoc" +
           feat1.getName() +

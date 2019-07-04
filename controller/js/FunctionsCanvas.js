@@ -20,9 +20,6 @@ function main(container) {
 
    graph.center(true, false, null , null);
 
-
-
-
     ports = new Array();
     ports['n'] = {
         x: 0.5,
