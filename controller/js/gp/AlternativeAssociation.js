@@ -34,7 +34,6 @@ function makeAlternativeAssociation(feature) {
 
              "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', associ[0], associ[associ.length-1],'edgeStyle=roundedStyle;curved=1')"
           );
-
         eval(
           "AlterAssoc" +
             feature.parent[0].value +
@@ -48,8 +47,7 @@ function makeAlternativeAssociation(feature) {
         grafo.listAssociations = grafo.model
           .getModel()
           .getChildEdges(grafo.model.getDefaultParent());
-
-      } finally {
+        } finally {
         layout.execute(grafo.model.getDefaultParent());
         grafo.organizeGraph();
         grafo.model.getModel().endUpdate();
@@ -58,7 +56,3 @@ function makeAlternativeAssociation(feature) {
     }
   }
 }
-
-
-
-

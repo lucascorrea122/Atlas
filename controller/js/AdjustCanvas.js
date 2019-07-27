@@ -3,9 +3,9 @@ function adjustSizes() {
   var topBarIconsSmall = document.getElementById("topBarIconGroupSmall");
   var canvas = document.getElementById("graphContainer");
   var modelName = document.getElementById("modelName");
+  var sidebar = document.getElementById('featureModalContent');
   var height = window.innerHeight;
-  var width = window.innerWidth;
-
+  var width = window.innerWidth
   canvasWidth = width - 90;
   canvasHeight = height - 95;
 
@@ -55,3 +55,5 @@ adjustTooltips = function() {
   left = width - (3 * 57 + 57 / 2 + tooltips[0].clientHeight / 2);
   tooltips[3].style.left = left + "px";
 };
+
+

@@ -107,6 +107,8 @@ function createFeature(name, type) {
 
     }
     layout.execute(grafo.model.getDefaultParent());
+
+
     grafo.organizeGraph();
     document.getElementById("modalFeature").style.display = "none";
   } else {
