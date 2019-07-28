@@ -5,8 +5,6 @@ function Graph(model) {
 }
 
 
-
-
 Graph.prototype.setModel = function (model) {
   this.model = model;
 };
