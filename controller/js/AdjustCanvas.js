@@ -37,16 +37,17 @@ adjustTooltips = function() {
   var width = window.innerWidth;
   var top;
   var left;
+  var right;
 
   // LeftBar Create Association
-  top = 66 + 68 + 34 - tooltips[9].clientHeight / 2;
-  tooltips[9].style.top = top + "px";
+  // top = 66 + 68 + 34 - tooltips[9].clientHeight / 2;
+  // tooltips[9].style.top = top + "px";
 
   // TopBar
-  left = width - (6 * 57 + 57 / 2 + tooltips[0].clientHeight / 2);
-  tooltips[0].style.left = left + "px";
+  right = width - (3.2 * 57 + 57 / 2 + tooltips[0].clientHeight / 2);
+  tooltips[5].style.right = right + "px";
 
-  left = width - (5 * 57 + 57 / 2 + tooltips[0].clientHeight / 2);
+  left = width - (17.6 * 57 + 57 / 2 + tooltips[0].clientHeight / 2);
   tooltips[1].style.left = left + "px";
 
   left = width - (4 * 57 + 57 / 2 + tooltips[0].clientHeight / 2);

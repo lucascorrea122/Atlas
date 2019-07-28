@@ -148,7 +148,7 @@
   }
 
   a {
-      color: #fff;
+      color: #ffffff;
       padding: 15px;
       text-decoration: none;
   }
@@ -186,7 +186,7 @@
   }
 
   .topBarIconGroup a:hover {
-      background-color: #fefffd;
+      background-color: #ffffff;
       color: #000000;
       height: 100%;
   }
@@ -262,15 +262,15 @@
 
   /*==================================side Bar==================================*/
 
-  .sideBar {
-      margin: 0;
-      position: fixed;
-      background-color: #222222;
-      width: 66px;
-      height: 100%;
-      /*overflow: hidden;*/
-      z-index: 2;
-  }
+  /*.sideBar {*/
+  /*    margin: 0;*/
+  /*    position: fixed;*/
+  /*    background-color: #222222;*/
+  /*    width: 66px;*/
+  /*    height: 100%;*/
+  /*    !*overflow: hidden;*!*/
+  /*    z-index: 2;*/
+  /*}*/
 
   .sideBarIconGroup {
       margin-top: 66px;
@@ -355,7 +355,7 @@
       content: " ";
       position: absolute;
       bottom: 100%;
-      left: 90%;
+      left: 10%;
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;
@@ -384,19 +384,20 @@
 
   /*==================================Tool tips SideBar==================================*/
 
-  .sideBar a .tooltip {
+.sideBar a .tooltip {
       background-color: #104581;
-      left: 70px;
+      left: 10px;
+    
   }
 
-  .sideBar a .tooltip::after {
+.sideBar a .tooltip::after {
       content: " ";
       position: absolute;
       top: 50%;
-      right: 100%;
+      left: -5px;
       margin-top: -5px;
       border-width: 5px;
       border-style: solid;
-      border-color: transparent #104581 transparent transparent;
+      border-color: transparent #251f81 transparent transparent;
   }
 
