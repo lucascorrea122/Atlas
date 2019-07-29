@@ -8,7 +8,7 @@ body {
     width: 100%;
 }
 
-input[type=text], input[type=password] {
+.myNav input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -18,27 +18,28 @@ input[type=text], input[type=password] {
 }
 
 /*  NavBar*/
-.myNav{
-
+.myNav  {
+    position: fixed;
 }
 
-.navbar{
+
+.myNav .navbar{
     background-color: transparent !important;
+    /*position: fixed;*/
 }
 
-.navbar .navbar-brand{
+
+.myNav .navbar .navbar-brand{
     font-weight: bolder;
     font-size: 1.3em;
 }
 
-.navbar .navbar-nav{
-    margin: 0 auto;
-
+.myNav .navbar .navbar-nav{
+    margin: 0 100px;
 }
 
-.navbar form button{
+.myNav form button{
     background-color: #2aff20;
-
 }
 
 /*button {*/
@@ -77,10 +78,10 @@ img.avatar {
 
 }
 
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
+/*span.psw {*/
+/*    float: right;*/
+/*    padding-top: 16px;*/
+/*}*/
 
 .topMenu .navbar{
     width: 100%;

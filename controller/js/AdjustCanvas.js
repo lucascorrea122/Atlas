@@ -6,11 +6,11 @@ function adjustSizes() {
   var sidebar = document.getElementById('featureModalContent');
   var height = window.innerHeight;
   var width = window.innerWidth
-  canvasWidth = width - 90;
+  canvasWidth = width - 150;
   canvasHeight = height - 95;
 
   canvas.style.width = canvasWidth + "px";
-  canvas.style.height = canvasHeight + "px";
+  // canvas.style.height = canvasHeight + "px";
   canvas.style.backgroundColor = "#F1F1F1";
 
   //  center model name input text

@@ -1,47 +1,32 @@
 <html>
 
 <head>
+    <title>Atlas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Atlas</title>
-
-    <!--imports the css, icons and fonts-->
-    <link rel="stylesheet" type="text/css" href="css/indexStyle.css">
+    <!--BootStrap CSS    -->
     <link rel="stylesheet" type="text/css" href="css/myStyle.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
-          integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"
-          integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/indexStyle.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <!-- JS Script -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-
-
-    <!--defines a global variable-->
-    <script type="text/javascript">
-        mxBasePath = 'controller/mxgraph';
-    </script>
 
     <!--gps specifics imports-->
     <script src="controller/js/gp/LoadXml.js"></script>
@@ -67,40 +52,57 @@
 </head>
 
 <body onload="main(document.getElementById('graphContainer'))">
-<div class="topMenu">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="imageHome">
-            <a href="index.php">
-                <img class="imageHome" src="Models/Atlas.png">
-            </a>
 
-        </div>
-        <div class="iconsTopMenu collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="gpNotation.php">GP</a>
+<div class="myNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
+        <a class="navbar-brand" href="home.php">Atlas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Atlas Modeler<span class="sr-only">(current)</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">FODA</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="gpNotation.php">GP</a>
+                    </div>
                 </li>
-
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Atlas Repository </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
             </ul>
-
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-
-
     </nav>
-</div>
 
-<div class="container">
-    <label for="uname"><b>Notation:</b></label>
-    <select id="notation" onchange="location.href = this.value;">
-        <option value="">Select a Notation</option>
-        <option value="./view/index.foda.html">Foda</option>
-        <option value="./view/index.gp.html">GP</option>
-    </select>
 
 </div>
 
-
-<!--Top Bar-->
 <div class="topBar">
 
     <div class="topBarIconGroup" id="topBarIconGroup">
@@ -135,11 +137,11 @@
                 <i class="fa fa-list"></i> </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownFunctions">
                 <a class="dropdown-item" onclick="grafo.getXml()" href="javascript:void(0);"> <span class="tooltip">Save as .xml</span> <i
-                        class="fa fa-save"></i> </a>
+                            class="fa fa-save"></i> </a>
                 <a class="dropdown-item" onclick="createLoadModalButtonClick()" href="javascript:void(0);"> <span
-                        class="tooltip">Load Model</span> <i class="fa fa-upload"></i> </a>
+                            class="tooltip">Load Model</span> <i class="fa fa-upload"></i> </a>
                 <a class="dropdown-item" onclick="show()" href="javascript:void(0)"> <span class="tooltip">Print</span> <i
-                        class="fa fa-print"></i> </a>
+                            class="fa fa-print"></i> </a>
                 <a class="dropdown-item" onclick="validateModel()" href="javascript:void(0);">
                     <span class="tooltip">Check Model</span>
                     <i class="fa fa-check"></i></a>
@@ -161,35 +163,6 @@
     </li>
 </div>
 
-
-<!--Top Bar Small Screen < 600 width-->
-<div class="topBarIconGroupSmall" id="topBarIconGroupSmall">
-    <a onclick="grafo.undoFunction()" href="javascript:void(0);">
-        <span class="tooltip">Undo</span>
-        <i class="fas fa-undo"></i> </a>
-    <a onclick="grafo.redoFunction()" href="javascript:void(0);">
-        <span class="tooltip">Redo</span>
-        <i class="fas fa-redo"></i> </a>
-    <a onclick="createLoadModalButtonClick()" href="javascript:void(0);">
-        <span class="tooltip">Load Model</span>
-        <i class="fa fa-upload"></i> </a>
-    <a onclick="grafo.getXml()" href="javascript:void(0);">
-        <span class="tooltip">Save as .xml</span>
-        <i class="fa fa-save"></i> </a>
-    <a onclick="show()" href="javascript:void(0)">
-        <span class="tooltip">Print</span>
-        <i class="fa fa-print"></i> </a>
-</div>
-
-
-<!--<div class="sideBar">-->
-<!--    <div class="sideBarIconGroup">-->
-
-
-<!--    </div>-->
-<!--</div>-->
-
-<!--Create Feature Modal-->
 <div class="modal" id="modalFeature">
     <div id="featureModalContent" class="featureModalContent">
         <div class="closeButton">
@@ -210,7 +183,6 @@
     </div>
 </div>
 
-<!--Create Association Modal-->
 <div class="modal" id="modalAssociation">
     <div id="associationModalContent" class="associationModalContent">
         <div class="closeButton">
@@ -232,7 +204,7 @@
 <div class="modal" id="loadFileModal">
     <div id="loadFileModalContent" class="loadFileModalContent">
         <div class="closeButton"><a onclick="closePopUp(loadFileModal);" href="javascript:void(0);"><i
-                    class="fa fa-times"></i></a><br/>
+                        class="fa fa-times"></i></a><br/>
         </div>
         <label><b>Select File</b></label><br/>
         <input id="fileInput" type="file" accept=".xml" value="select"><br/>
@@ -240,14 +212,12 @@
     </div>
 </div>
 
-<!--Canvas-->
 <div class="canvas" id="canvas">
     <div id="graphContainer">
 
     </div>
-
-
 </div>
+
 
 </body>
 
