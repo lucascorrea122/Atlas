@@ -37,39 +37,55 @@
       padding-bottom: 30px;
       font-size: 22px;
       left: 22px;
+
+
   }
 
+  .closeButton .fa-times{
+      /*color: red;*/
+      /*background: red;*/
+      margin-right: 10px;
+      margin-top: 3px;
+  }
 
 
   /*==================================Feature==================================*/
 
   .featureModalContent {
-      margin-top: 66px;
+      margin-top: 122.5px;
       display:block;
       text-align: center;
       position: fixed;
       background-color: #222222;
-      width: 198px;
+      width: 200px;
       height: 100%;
       font-family: Verdana;
       color: #fff;
   }
 
+  .featureModalContent .form-control{
+      width: 170px;
+      margin: 0 auto;
+  }
 
   /*==================================Association==================================*/
 
   .associationModalContent {
       display: block;
-      margin-top: 66px;
+      margin-top: 122.5px;
       text-align: center;
       position: fixed;
       background-color: #222222;
-      width: 198px;
+      width: 200px;
       height: 100%;
       font-family: Verdana;
       color: #fff;
   }
 
+  .associationModalContent .form-control{
+      width: 170px;
+      margin: 0 auto;
+  }
 
   /*==================================File==================================*/
 
@@ -164,8 +180,7 @@
       width: 100%;
       height: 66px;
       z-index: 3;
-      margin-top: 13px;
-
+      margin-top: 0px;
 
 
   }
@@ -178,6 +193,7 @@
   .topBarIconGroup {
       float: left;
       list-style:none;
+
   }
 
  .topBarIconGroup .dropdown-menu a{
@@ -213,11 +229,12 @@
       vertical-align: middle;
       border: none;
       background: none;
-      color: #FFF;
+      color: #ffffff;
       font-size: 20px;
       font-weight: bold;
       outline: 0;
       float: left;
+
   }
 
   .modelName:focus::-moz-placeholder {
@@ -319,7 +336,8 @@
       margin-left: 70px;
       margin-top: 70px;
       background: #fff;
-
+      z-index:1;
+      opacity:.9;
   }
 
   #graphContainer {
@@ -328,6 +346,7 @@
       width:1300px;
       height:600px;
       cursor:default;
+
   }
 
 

@@ -44,7 +44,7 @@
                         Atlas Modeler<span class="sr-only">(current)</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">FODA</a>
+                        <a class="dropdown-item" href="fodaNotation.php">FODA</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="gpNotation.php">GP</a>
                     </div>

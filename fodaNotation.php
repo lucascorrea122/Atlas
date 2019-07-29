@@ -43,22 +43,22 @@
             crossorigin="anonymous"></script>
 
     <!--gps specifics imports-->
-    <script src="controller/js/gp/LoadXml.js"></script>
-    <script src="controller/js/gp/ValidationScript.js"></script>
-    <script src="controller/js/gp/Feature.js"></script>
-    <script src="controller/js/gp/Graph.js"></script>
-    <script src="controller/js/gp/Association.js"></script>
-    <script src="controller/js/gp/CreateFeature.js"></script>
-    <script src="controller/js/gp/AlternativeAssociation.js"></script>
-    <script src="controller/js/gp/ChangeType.js"></script>
+    <script src="controller/js/foda/LoadXml.js"></script>
+    <script src="controller/js/foda/ValidationScript.js"></script>
+    <script src="controller/js/foda/Feature.js"></script>
+    <script src="controller/js/foda/Graph.js"></script>
+    <script src="controller/js/foda/Association.js"></script>
+    <script src="controller/js/foda/CreateFeature.js"></script>
+    <script src="controller/js/foda/AlternativeAssociation.js"></script>
+    <script src="controller/js/foda/ChangeType.js"></script>
 
     <!--general imports-->
-    <script src="controller/js/FunctionBezierCurve.js"></script>
-    <script src="controller/js/Modal.js"></script>
-    <script src="controller/js/AdjustCanvas.js"></script>
-    <script src="controller/js/Download.js"></script>
-    <script src="controller/js/SavePng.js"></script>
-    <script src="controller/js/FunctionsCanvas.js"></script>
+    <script src="controller/foda/FunctionBezierCurve.js"></script>
+    <script src="controller/foda/Modal.js"></script>
+    <script src="controller/foda/AdjustCanvas.js"></script>
+    <script src="controller/foda/Download.js"></script>
+    <script src="controller/foda/SavePng.js"></script>
+    <script src="controller/foda/FunctionsCanvas.js"></script>
 
     <!--mxgraphs specifics imports-->
     <script src="controller/mxgraph/mxClient.js"></script>
@@ -152,11 +152,11 @@
                 <i class="fa fa-list"></i> </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownFunctions">
                 <a class="dropdown-item" onclick="grafo.getXml()" href="javascript:void(0);"> <span class="tooltip">Save as .xml</span> <i
-                            class="fa fa-save"></i> </a>
+                        class="fa fa-save"></i> </a>
                 <a class="dropdown-item" onclick="createLoadModalButtonClick()" href="javascript:void(0);"> <span
-                            class="tooltip">Load Model</span> <i class="fa fa-upload"></i> </a>
+                        class="tooltip">Load Model</span> <i class="fa fa-upload"></i> </a>
                 <a class="dropdown-item" onclick="show()" href="javascript:void(0)"> <span class="tooltip">Print</span> <i
-                            class="fa fa-print"></i> </a>
+                        class="fa fa-print"></i> </a>
                 <a class="dropdown-item" onclick="validateModel()" href="javascript:void(0);">
                     <span class="tooltip">Check Model</span>
                     <i class="fa fa-check"></i></a>
@@ -219,7 +219,7 @@
 <div class="modal" id="loadFileModal">
     <div id="loadFileModalContent" class="loadFileModalContent">
         <div class="closeButton"><a onclick="closePopUp(loadFileModal);" href="javascript:void(0);"><i
-                        class="fa fa-times"></i></a><br/>
+                    class="fa fa-times"></i></a><br/>
         </div>
         <label><b>Select File</b></label><br/>
         <input id="fileInput" type="file" accept=".xml" value="select"><br/>

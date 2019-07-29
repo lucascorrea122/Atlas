@@ -6,20 +6,21 @@ body {
     background-size: 100% 100% ;
     height: 100%;
     width: 100%;
+
 }
 
-.myNav input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
+/*.myNav input[type=text], input[type=password] {*/
+/*    width: 100%;*/
+/*    padding: 12px 20px;*/
+/*    margin: 8px 0;*/
+/*    display: inline-block;*/
+/*    border: 1px solid #ccc;*/
+/*    box-sizing: border-box;*/
+/*}*/
 
 /*  NavBar*/
 .myNav  {
-    position: fixed;
+    /*position: fixed;*/
 }
 
 
@@ -35,12 +36,18 @@ body {
 }
 
 .myNav .navbar .navbar-nav{
-    margin: 0 100px;
+    margin: 0 auto;
 }
 
 .myNav form button{
-    background-color: #2aff20;
+    background-color: #60d64e;
+    margin: 2px;
 }
+
+#btnSignIn{
+    background-color: transparent;
+}
+
 
 /*button {*/
 /*    background-color: red;*/

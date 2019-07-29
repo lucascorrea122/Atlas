@@ -7,11 +7,12 @@ function adjustSizes() {
   var height = window.innerHeight;
   var width = window.innerWidth
   canvasWidth = width - 150;
-  canvasHeight = height - 95;
+  canvasHeight = height - 150;
 
   canvas.style.width = canvasWidth + "px";
-  // canvas.style.height = canvasHeight + "px";
-  canvas.style.backgroundColor = "#F1F1F1";
+  canvas.style.height = canvasHeight + "px";
+  canvas.style.backgroundColor = "RGB(241, 241, 241)";
+  canvas.style.margin = "auto";
 
   //  center model name input text
   //modelName.style.marginLeft = width / 2 - modelName.clientWidth / 2 + "px";
