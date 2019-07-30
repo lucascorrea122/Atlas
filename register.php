@@ -13,6 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/indexStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/myStyle.css">
 
     <!-- JS Script -->
 
@@ -27,7 +28,7 @@
             crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body >
 <div class="myNav">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="home.php">Atlas</a>
@@ -71,10 +72,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button id="btnSignIn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</button>
-
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
-
-
             </form>
         </div>
     </nav>
@@ -82,7 +80,34 @@
 
 </div>
 
+<div class="register">
+    <form>
+        <div class="form-group">
+            <label class="name">Name</label>
+            <input type="text" class="form-control" id="inputName" aria-describedby="name" placeholder="Your Name">
+
+            <label Class="FormControlSelect">Select an area</label>
+            <select class="form-control" id="formControlSelect1">
+                <option></option>
+                <option>teacher</option>
+                <option>Student</option>
+                <option>Researcher</option>
+            </select>
+
+            <label class="email">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+            <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone.</small>
+
+            <label class="inputPassword">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+</div>
 
 </body>
+
+
 
 </html>

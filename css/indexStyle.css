@@ -19,9 +19,12 @@ body {
 /*}*/
 
 /*  NavBar*/
-.myNav  {
+.myNav .dropdown-item {
     /*position: fixed;*/
+    font-size: 14px;
 }
+
+
 
 
 .myNav .navbar{
@@ -40,6 +43,11 @@ body {
 }
 
 .myNav form button{
+    background-color: #60d64e;
+    margin: 2px;
+}
+
+.myNav form a{
     background-color: #60d64e;
     margin: 2px;
 }

@@ -350,6 +350,7 @@
   }
 
 
+
   /*==================================Tool tips==================================*/
 
   .tooltip {
@@ -427,4 +428,31 @@
       border-style: solid;
       border-color: transparent #251f81 transparent transparent;
   }
+
+
+/*==========================================================================*/
+
+.register{
+    background-color: rgb(255,255,255,0.9);
+    height: 550px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+/*===============  Form Register  ===================*/
+
+.register{
+    background-color: rgb(255,255,255,0.9);
+    height: 550px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+ .email{
+    width: 100px;
+
+}
+
 
