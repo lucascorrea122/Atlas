@@ -444,14 +444,15 @@
 
 .register{
     background-color: rgb(255,255,255,0.9);
-    height: 550px;
-    margin-left: 200px;
-    margin-right: 200px;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
 
 }
 
- .email{
-    width: 100px;
+ .register .email{
+    width: 10px;
 
 }
 

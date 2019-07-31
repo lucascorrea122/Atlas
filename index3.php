@@ -35,7 +35,7 @@
 <div class="topMenu">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="imageHome">
-            <a href="index.php">
+            <a href="index3.php">
                 <img class="imageHome" src="Models/Atlas.png">
             </a>
 

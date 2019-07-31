@@ -1,3 +1,8 @@
+<?php
+include_once("connection.php");
+
+?>
+
 <html>
 
 <head>
@@ -28,7 +33,7 @@
             crossorigin="anonymous"></script>
 </head>
 
-<body >
+<body>
 <div class="myNav">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="home.php">Atlas</a>
@@ -81,25 +86,37 @@
 </div>
 
 <div class="register">
-    <form>
+    <form method="post" action="processes.php">
         <div class="form-group">
             <label class="name">Name</label>
-            <input type="text" class="form-control" id="inputName" aria-describedby="name" placeholder="Your Name">
+            <input type="text" class="form-control" id="inputName" name="name" maxlength="40" required
+                   aria-describedby="name" placeholder="Your Name">
 
             <label Class="FormControlSelect">Select an area</label>
-            <select class="form-control" id="formControlSelect1">
-                <option></option>
-                <option>teacher</option>
-                <option>Student</option>
-                <option>Researcher</option>
+            <select class="form-control" id="formControlSelect1" name="selectArea">
+                <option> Select </option>
+                <?php
+                $query_levels_acess = "SELECT * FROM levels_acess";
+                $result_levels_acess = mysqli_query($connection, $query_levels_acess);
+                while ($row_levels_acess = mysqli_fetch_assoc($result_levels_acess)) { ?>
+                    <option value="<?php echo $row_levels_acess['cod']; ?>">
+                        <?php
+                        echo $row_levels_acess['name'];
+                        ?>
+
+                    </option>   <?php
+                }
+                ?>
+
             </select>
 
             <label class="email">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+                   maxlength="40" placeholder="Your Email">
             <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone.</small>
 
             <label class="inputPassword">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your Password">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your Password" name="password">
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
@@ -107,7 +124,6 @@
 </div>
 
 </body>
-
 
 
 </html>
