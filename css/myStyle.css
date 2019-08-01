@@ -1,118 +1,118 @@
-.navbar{
+.navbar {
     background-color: #6c31ff;
 
 }
 
-.dropdown-menu a{
-   font-size: 30px;
+.dropdown-menu a {
+    font-size: 30px;
 
 }
 
 
 /*==================================generic==================================*/
 
-  .modal {
-      position: fixed;
-      display: none;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      z-index: 5;
-  }
+.modal {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 5;
+}
 
-  select {
-      width: 170px;
-      margin: 10px;
-      padding: 3px;
-  }
+select {
+    width: 170px;
+    margin: 10px;
+    padding: 3px;
+}
 
-  .modal input {
-      margin: 10px;
-      padding: 3px;
-      width: 160px;
-  }
+.modal input {
+    margin: 10px;
+    padding: 3px;
+    width: 160px;
+}
 
-  .closeButton {
-      text-align: right;
-      padding-bottom: 30px;
-      font-size: 22px;
-      left: 22px;
-
-
-  }
-
-  .closeButton .fa-times{
-      /*color: red;*/
-      /*background: red;*/
-      margin-right: 10px;
-      margin-top: 3px;
-  }
+.closeButton {
+    text-align: right;
+    padding-bottom: 30px;
+    font-size: 22px;
+    left: 22px;
 
 
-  /*==================================Feature==================================*/
+}
 
-  .featureModalContent {
-      margin-top: 122.5px;
-      display:block;
-      text-align: center;
-      position: fixed;
-      background-color: #222222;
-      width: 200px;
-      height: 100%;
-      font-family: Verdana;
-      color: #fff;
-  }
+.closeButton .fa-times {
+    /*color: red;*/
+    /*background: red;*/
+    margin-right: 10px;
+    margin-top: 3px;
+}
 
-  .featureModalContent .form-control{
-      width: 170px;
-      margin: 0 auto;
-  }
 
-  /*==================================Association==================================*/
+/*==================================Feature==================================*/
 
-  .associationModalContent {
-      display: block;
-      margin-top: 122.5px;
-      text-align: center;
-      position: fixed;
-      background-color: #222222;
-      width: 200px;
-      height: 100%;
-      font-family: Verdana;
-      color: #fff;
-  }
+.featureModalContent {
+    margin-top: 122.5px;
+    display: block;
+    text-align: center;
+    position: fixed;
+    background-color: #222222;
+    width: 200px;
+    height: 100%;
+    font-family: Verdana;
+    color: #fff;
+}
 
-  .associationModalContent .form-control{
-      width: 170px;
-      margin: 0 auto;
-  }
+.featureModalContent .fname {
+    width: 170px;
+    margin: 0 auto;
+}
 
-  /*==================================File==================================*/
+/*==================================Association==================================*/
 
-  .loadFileModalContent {
-      display: block;
-      text-align: center;
-      position: fixed;
-      background-color: #104581;
-      width: 100%;
-      height: 130px;
-      font-family: Verdana;
-      color: #fff;
-  }
+.associationModalContent {
+    display: block;
+    margin-top: 122.5px;
+    text-align: center;
+    position: fixed;
+    background-color: #222222;
+    width: 200px;
+    height: 100%;
+    font-family: Verdana;
+    color: #fff;
+}
 
-  .loadFileModalContent input{
-      width: auto;
-      border-style: solid;
-  }
+.associationModalContent .form-control {
+    width: 170px;
+    margin: 0 auto;
+}
 
-  .loadFileModalContent .closeButton {
+/*==================================File==================================*/
 
-      top: 0;
-      text-align: right;
-      padding-bottom: 0px;
-  }
+.loadFileModalContent {
+    display: block;
+    text-align: center;
+    position: fixed;
+    background-color: #104581;
+    width: 100%;
+    height: 130px;
+    font-family: Verdana;
+    color: #fff;
+}
 
-  body div.mxPopupMenu {
+.loadFileModalContent input {
+    width: auto;
+    border-style: solid;
+}
+
+.loadFileModalContent .closeButton {
+
+    top: 0;
+    text-align: right;
+    padding-bottom: 0px;
+}
+
+body div.mxPopupMenu {
     -webkit-box-shadow: 3px 3px 6px #C0C0C0;
     -moz-box-shadow: 3px 3px 6px #C0C0C0;
     box-shadow: 3px 3px 6px #C0C0C0;
@@ -120,320 +120,319 @@
     position: absolute;
     border: 3px solid #e7e7e7;
     padding: 3px;
-  }
+}
 
-  body table.mxPopupMenu {
+body table.mxPopupMenu {
     border-collapse: collapse;
     margin: 0px;
-  }
+}
 
-  body tr.mxPopupMenuItem {
+body tr.mxPopupMenuItem {
     color: black;
     cursor: default;
-  }
+}
 
-  body td.mxPopupMenuItem {
+body td.mxPopupMenuItem {
     padding: 6px 60px 6px 30px;
     font-family: Arial;
     font-size: 10pt;
-  }
+}
 
-  body td.mxPopupMenuIcon {
+body td.mxPopupMenuIcon {
     background-color: white;
     padding: 0px;
-  }
+}
 
-  body tr.mxPopupMenuItemHover {
+body tr.mxPopupMenuItemHover {
     background-color: #eeeeee;
     color: black;
-  }
+}
 
-  table.mxPopupMenu hr {
+table.mxPopupMenu hr {
     border-top: solid 1px #cccccc;
-  }
+}
 
-  table.mxPopupMenu tr {
+table.mxPopupMenu tr {
     font-size: 4pt;
-  }
+}
 
-  /*==================================generic==================================*/
+/*==================================generic==================================*/
 
-  body {
-      margin: 0;
-      background-color: #F1F1F1;
-  }
+body {
+    margin: 0;
+    background-color: #F1F1F1;
+}
 
- a {
-      color: #ffffff;
-      /*padding: 15px;*/
-      text-decoration: none;
-  }
-
-
-  /*==================================top Bar==================================*/
-
-  .topBar {
-      display: inline;
-      position: fixed;
-      /*overflow: hidden;*/
-      background-color: #010000;
-      width: 100%;
-      height: 66px;
-      z-index: 3;
-      margin-top: 0px;
+a {
+    color: #ffffff;
+    /*padding: 15px;*/
+    text-decoration: none;
+}
 
 
-  }
+/*==================================top Bar==================================*/
 
-  .topBar a{
-      padding: 15px;
+.topBar {
+    display: inline;
+    position: fixed;
+    /*overflow: hidden;*/
+    background-color: #010000;
+    width: 100%;
+    height: 66px;
+    z-index: 3;
+    margin-top: 0px;
 
-  }
 
-  .topBarIconGroup {
-      float: left;
-      list-style:none;
+}
 
-  }
+.topBar a {
+    padding: 15px;
 
- .topBarIconGroup .dropdown-menu a{
-      color: #0b2e13;
+}
 
-  }
+.topBarIconGroup {
+    float: left;
+    list-style: none;
 
-  .topBarIconGroup a {
-      font-size: 30px;
-      display: inline-block;
-      text-align: center;
-      vertical-align: middle;
-      color: #fefffd;
-  }
+}
 
-  .topBarIconGroup a:hover {
-      background-color: #ffffff;
-      color: #000000;
-      height: 100%;
-  }
+.topBarIconGroup .dropdown-menu a {
+    color: #0b2e13;
 
- .topBarIconGroup .dropdown-menu a:hover {
+}
+
+.topBarIconGroup a {
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    color: #fefffd;
+}
+
+.topBarIconGroup a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    height: 100%;
+}
+
+.topBarIconGroup .dropdown-menu a:hover {
     background-color: #d2d2d2;
     color: #000000;
- }
+}
 
 
 .modelName {
-      height: 40px;
-      margin-top: 12px;
-      margin-left: 0px;
-      text-align: center;
-      vertical-align: middle;
-      border: none;
-      background: none;
-      color: #ffffff;
-      font-size: 20px;
-      font-weight: bold;
-      outline: 0;
-      float: left;
+    height: 40px;
+    margin-top: 12px;
+    margin-left: 0px;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    outline: 0;
+    float: left;
 
-  }
+}
 
-  .modelName:focus::-moz-placeholder {
-      color: transparent;
-  }
+.modelName:focus::-moz-placeholder {
+    color: transparent;
+}
 
-  .modelName:focus::-webkit-input-placeholder {
-      color: transparent;
-  }
+.modelName:focus::-webkit-input-placeholder {
+    color: transparent;
+}
 
-  .modelName:focus:-ms-input-placeholder {
-      color: transparent;
-  }
+.modelName:focus:-ms-input-placeholder {
+    color: transparent;
+}
 
-  .iconsTopBar .li{
-      display: inline-block;
+.iconsTopBar .li {
+    display: inline-block;
 
-  }
+}
 
-  li{
-        display: inline;
-    }
+li {
+    display: inline;
+}
 
-   .color{
-      color: black;
-  }
-
-
-  /*==================================topBarSmall=====================================*/
-
-  .topBarIconGroupSmall {
-      /*position: fixed;*/
-      margin-top: 66px;
-      display: none;
-      float: right;
-      background-color: #222222;
-      z-index: 3;
-  }
-
-  .topBarIconGroupSmall a {
-      font-size: 30px;
-      display: block;
-      text-align: center;
-  }
-
-  .topBarIconGroupSmall a:hover {
-      background-color: #104581;
-  }
+.color {
+    color: black;
+}
 
 
-  /*==================================side Bar==================================*/
+/*==================================topBarSmall=====================================*/
 
-  /*.sideBar {*/
-  /*    margin: 0;*/
-  /*    position: fixed;*/
-  /*    background-color: #222222;*/
-  /*    width: 66px;*/
-  /*    height: 100%;*/
-  /*    !*overflow: hidden;*!*/
-  /*    z-index: 2;*/
-  /*}*/
+.topBarIconGroupSmall {
+    /*position: fixed;*/
+    margin-top: 66px;
+    display: none;
+    float: right;
+    background-color: #222222;
+    z-index: 3;
+}
 
-  .sideBarIconGroup {
-      margin-top: 66px;
-  }
+.topBarIconGroupSmall a {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
 
-  .sideBarIconGroup a {
-      font-size: 200%;
-      display: block;
-      text-align: center;
-  }
-
-  .sideBarIconGroup a:hover {
-      background-color: #104581;
-  }
+.topBarIconGroupSmall a:hover {
+    background-color: #104581;
+}
 
 
-  /*==================================Model Text==================================*/
+/*==================================side Bar==================================*/
 
-  #mySavedModel {
-      width: 100%;
-      height: 400px;
-  }
+/*.sideBar {*/
+/*    margin: 0;*/
+/*    position: fixed;*/
+/*    background-color: #222222;*/
+/*    width: 66px;*/
+/*    height: 100%;*/
+/*    !*overflow: hidden;*!*/
+/*    z-index: 2;*/
+/*}*/
 
-  #myModel {
-      width: 100%;
-      height: 400px;
-  }
+.sideBarIconGroup {
+    margin-top: 66px;
+}
 
-  #JsonText {
-      display: none;
-  }
+.sideBarIconGroup a {
+    font-size: 200%;
+    display: block;
+    text-align: center;
+}
 
-
-  /*==================================Model graphic==================================*/
-
-  .canvas {
-      position: absolute;
-      margin-left: 70px;
-      margin-top: 70px;
-      background: #fff;
-      z-index:1;
-      opacity:.9;
-  }
-
-  #graphContainer {
-      position:relative;
-      overflow:hidden;
-      width:1300px;
-      height:600px;
-      cursor:default;
-
-  }
+.sideBarIconGroup a:hover {
+    background-color: #104581;
+}
 
 
+/*==================================Model Text==================================*/
 
-  /*==================================Tool tips==================================*/
+#mySavedModel {
+    width: 100%;
+    height: 400px;
+}
 
-  .tooltip {
-      visibility: hidden;
-      font-family: Verdana;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      position: absolute;
-      padding: 5px 0;
-      width: 200px;
-      z-index: 5;
-      color: #fff;
-  }
+#myModel {
+    width: 100%;
+    height: 400px;
+}
 
-  a:hover .tooltip {
-      visibility: visible;
-      opacity: 0.9;
-  }
+#JsonText {
+    display: none;
+}
 
 
-  /*==================================Tool tips TopBar==================================*/
+/*==================================Model graphic==================================*/
 
-  .topBar a .tooltip {
-      background-color: #222222;
-      top: 70px;
-  }
+.canvas {
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 70px;
+    background: #fff;
+    z-index: 1;
+    opacity: .9;
+}
 
-  .topBar a .tooltip::after {
-      content: " ";
-      position: absolute;
-      bottom: 100%;
-      left: 10%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent transparent #222222 transparent;
-  }
+#graphContainer {
+    position: relative;
+    overflow: hidden;
+    width: 1300px;
+    height: 600px;
+    cursor: default;
 
-
-  /*==================================Tool tips TopBarSmall==================================*/
-
-  .topBarIconGroupSmall a .tooltip {
-      background-color: #104581;
-      right: 70px;
-  }
-
-  .topBarIconGroupSmall a .tooltip::after {
-      content: " ";
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      margin-top: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent transparent transparent #104581;
-  }
+}
 
 
-  /*==================================Tool tips SideBar==================================*/
+/*==================================Tool tips==================================*/
+
+.tooltip {
+    visibility: hidden;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    padding: 5px 0;
+    width: 200px;
+    z-index: 5;
+    color: #fff;
+}
+
+a:hover .tooltip {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+
+/*==================================Tool tips TopBar==================================*/
+
+.topBar a .tooltip {
+    background-color: #222222;
+    top: 70px;
+}
+
+.topBar a .tooltip::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #222222 transparent;
+}
+
+
+/*==================================Tool tips TopBarSmall==================================*/
+
+.topBarIconGroupSmall a .tooltip {
+    background-color: #104581;
+    right: 70px;
+}
+
+.topBarIconGroupSmall a .tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #104581;
+}
+
+
+/*==================================Tool tips SideBar==================================*/
 
 .sideBar a .tooltip {
-      background-color: #104581;
-      left: 10px;
+    background-color: #104581;
+    left: 10px;
 
-  }
+}
 
 .sideBar a .tooltip::after {
-      content: " ";
-      position: absolute;
-      top: 50%;
-      left: -5px;
-      margin-top: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent #251f81 transparent transparent;
-  }
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #251f81 transparent transparent;
+}
 
 
 /*==========================================================================*/
 
-.register{
-    background-color: rgb(255,255,255,0.9);
+.register {
+    background-color: rgb(255, 255, 255, 0.9);
     height: 550px;
     margin-left: 200px;
     margin-right: 200px;
@@ -442,18 +441,42 @@
 
 /*===============  Form Register  ===================*/
 
-.register{
-    background-color: rgb(255,255,255,0.9);
+.register {
+    background-color: rgb(255, 255, 255, 0.9);
     height: 80%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 20px;
-
 }
 
- .register .email{
-    width: 10px;
-
+.register .formRegister{
+    /*margin: 0 auto;*/
+    margin-left: 200px;
 }
+
+.formRegister #registerInputName {
+    width: 350px;
+}
+
+.formRegister #registerInputArea {
+    width: 150px    ;
+}
+
+.formRegister #registerInputArea {
+    width: 300px;
+}
+
+.formRegister #registerInputEmail {
+    width: 350px;
+}
+
+.formRegister #registerInputPassword {
+    width: 200px;
+}
+
+.register .btn{
+    margin-left: 200px;
+}
+
 
 

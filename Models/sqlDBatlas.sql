@@ -21,8 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `dbatlas`
 --
-CREATE DATABASE IF NOT EXISTS `aaatlas` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `aaatlas`;
+CREATE DATABASE IF NOT EXISTS `dbatlas` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `dbatlas`;
 
 -- --------------------------------------------------------
 
@@ -40,9 +40,9 @@ CREATE TABLE `levels_acess` (
 --
 
 INSERT INTO `levels_acess` (`cod`, `name`) VALUES
-(3, 'Researcher'),
+(1, 'Teacher'),
 (2, 'Student'),
-(1, 'Teacher');
+(3, 'Researcher');
 
 -- --------------------------------------------------------
 

@@ -25,12 +25,16 @@ include_once("connection.php");
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
+
+    <script src="processes.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -76,24 +80,26 @@ include_once("connection.php");
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button id="btnSignIn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</button>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+                <a id="btnSignIn" href="register.php" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</a>
+                <a href="register.php"  class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</a>
+
             </form>
         </div>
     </nav>
 
 
+
 </div>
 
-<div class="register">
+<div class="register" id="registerUser">
     <form method="post" action="processes.php">
-        <div class="form-group">
+        <div class="formRegister form-group" >
             <label class="name">Name</label>
-            <input type="text" class="form-control" id="inputName" name="name" maxlength="40" required
+            <input type="text" class="form-control" id="registerInputName" name="name" maxlength="40" required
                    aria-describedby="name" placeholder="Your Name">
 
             <label Class="FormControlSelect">Select an area</label>
-            <select class="form-control" id="formControlSelect1" name="selectArea">
+            <select class="form-control" id="registerInputArea" name="selectArea">
                 <option> Select </option>
                 <?php
                 $query_levels_acess = "SELECT * FROM levels_acess";
@@ -111,17 +117,37 @@ include_once("connection.php");
             </select>
 
             <label class="email">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+            <input type="email" class="femailRegister form-control" id="registerInputEmail" aria-describedby="emailHelp" name="email"
                    maxlength="40" placeholder="Your Email">
             <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone.</small>
 
             <label class="inputPassword">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your Password" name="password">
+            <input type="password" class="form-control" id="registerInputPassword" placeholder="Your Password" name="password">
+
+
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+</div>
+
+<div class="register" id="loginUser">
+    <form method="post" action="login.php">
+        <div class="formRegister form-group">
+            <label class="email">Email</label>
+            <input type="text" class="femailRegister form-control" id="registerInputEmail" aria-describedby="emailHelp" name="loginEmail"
+                   maxlength="40" placeholder="Your Email">
+
+            <label class="inputPassword">Password</label>
+            <input type="password" class="form-control" id="registerInputPassword" placeholder="Your Password" name="loginPassword">
+
+
+        </div>
+        <button type="submit"  class="btn btn-primary" >Submit</button>
     </form>
 
 </div>
+
+
 
 </body>
 

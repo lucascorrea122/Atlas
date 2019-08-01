@@ -3,11 +3,10 @@
 include_once("connection.php");
 
 
-
 $stmt = $connection->prepare("INSERT INTO users (name, email, user_password, area) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("sssi", $name, $email, $passwordHash, $area);
 
-$options = array('cost'=>11);
+$options = array('cost' => 11);
 
 $name = $_POST['name'];
 $area = $_POST['selectArea'];
@@ -20,27 +19,22 @@ $pass = "gaga";
 
 $stmt->execute();
 
-if(password_verify($password, $passwordHash)){
-   echo "password correct <br/><br/><br/><br/>";
-}else{
-
-    echo "password incorret ";
-}
-
-
-if(password_verify($pass, $passwordHash)){
-
+if (password_verify($password, $passwordHash)) {
     echo "password correct <br/><br/><br/><br/>";
-}else{
-
+} else {
     echo "password incorret ";
-
 }
 
 
+if (password_verify($pass, $passwordHash)) {
+    echo "password correct <br/><br/><br/><br/>";
+} else {
+    echo "password incorret ";
+}
 
-//$insertUsers = mysqli_query($connection, $sql);
 
 $stmt->close();
 mysqli_close($connection);
+
+
 ?>
