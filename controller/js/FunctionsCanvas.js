@@ -18,7 +18,7 @@ function main(container) {
     graph.setConnectable(true);
     graph.setPortsEnabled(false);
 
-   graph.center(true, false, null , null);
+   // graph.center(true, false, null , null);
 
     ports = new Array();
     ports['n'] = {
