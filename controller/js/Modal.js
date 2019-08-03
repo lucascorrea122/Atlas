@@ -19,6 +19,9 @@ window.onclick = function(event) {
     if (event.target == document.getElementById('modalFeature')) {
         document.getElementById('modalFeature').style.display = "none";
     }
+    if (event.target == document.getElementById('modalConstraint')) {
+        document.getElementById('modalConstraint').style.display = "none";
+    }
 }
 
 function createLoadModalButtonClick() {

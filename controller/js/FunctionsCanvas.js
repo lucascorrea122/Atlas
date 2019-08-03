@@ -187,6 +187,18 @@ function main(container) {
             menu.addItem('Create Association', null, function () {
                 showPopUp(modalAssociation);
             });
+
+            menu.addItem('Create Constraint', null, function () {
+                var list = grafo.getAllFeatures();
+                if (list.length == 0){
+                    alert("oi")
+                }else {
+                    showPopUp(modalConstraint);
+                    setCheckBox();
+                }
+
+
+            });
         }
     };
     adjustSizes();

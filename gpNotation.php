@@ -115,7 +115,6 @@
         </div>
     </nav>
 
-
 </div>
 
 <div class="topBar">
@@ -151,11 +150,13 @@
                 <span class="tooltip">Functions</span>
                 <i class="fa fa-list"></i> </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownFunctions">
-                <a class="dropdown-item" onclick="grafo.getXml()" href="javascript:void(0);"> <span class="tooltip">Save as .xml</span> <i
+                <a class="dropdown-item" onclick="grafo.getXml()" href="javascript:void(0);"> <span class="tooltip">Save as .xml</span>
+                    <i
                             class="fa fa-save"></i> </a>
                 <a class="dropdown-item" onclick="createLoadModalButtonClick()" href="javascript:void(0);"> <span
                             class="tooltip">Load Model</span> <i class="fa fa-upload"></i> </a>
-                <a class="dropdown-item" onclick="show()" href="javascript:void(0)"> <span class="tooltip">Print</span> <i
+                <a class="dropdown-item" onclick="show()" href="javascript:void(0)"> <span class="tooltip">Print</span>
+                    <i
                             class="fa fa-print"></i> </a>
                 <a class="dropdown-item" onclick="validateModel()" href="javascript:void(0);">
                     <span class="tooltip">Check Model</span>
@@ -192,7 +193,8 @@
             <option value="alternative">Alternative</option>
         </select>
         <p></p>
-        <button class="btn" id="createFeatureSubmitButton" onclick="createFeature(featureName2.value,featureType2.value)"
+        <button class="btn" id="createFeatureSubmitButton"
+                onclick="createFeature(featureName2.value,featureType2.value)"
                 type="submit">Create
         </button>
     </div>
@@ -224,6 +226,12 @@
         <label><b>Select File</b></label><br/>
         <input id="fileInput" type="file" accept=".xml" value="select"><br/>
         <button id="loadFileSubmitButton" onclick="loadFile(grafo.model)" type="submit">Import</button>
+    </div>
+</div>
+
+<div class="modal" id="modalConstraint" >
+    <div class="constrainModalContent" id="constrainModalContent">
+
     </div>
 </div>
 

@@ -74,6 +74,8 @@ Graph.prototype.getFeatureNames = function () {
 };
 
 
+
+
 Graph.prototype.organizeGraph = function () {
   layout.useBoundingBox = false;
   layout.edgeRouting = false;
@@ -271,6 +273,51 @@ Graph.prototype.clearGraph = function () {
   grafo.listFeatures = [];
   grafo.listAssociations = [];
 };
+
+
+// Dynamic Check Box
+
+function setCheckBox(){
+
+  var list = grafo.getFeatureNames();
+
+
+    for (var i = 0; i < list.length; i++) {
+      createCheckBox(list[i]);
+    }
+
+}
+
+function createCheckBox(name){
+
+  if(typeof(name) === "string"){
+    var modal = document.getElementById("constrainModalContent");
+
+    var div = document.createElement("div");
+    var label = document.createElement("label");
+    var input = document.createElement("input");
+
+    div.setAttribute("class" , "form-check center");
+
+    input.setAttribute("type", "checkbox");
+    input.setAttribute("class", "form-check-input");
+
+    label.innerHTML = name;
+    // label.setAttribute("class", "form-check-input");
+
+    div.appendChild(input);
+    div.appendChild(label);
+    modal.appendChild(div);
+
+  }else {
+      funcao1();
+  }
+}
+
+function funcao1 (){
+   alert("NÃO É UMA STRING");
+}
+
 
 //
 // Graph.prototype.insertORalternative = function (child, alternatives) {
