@@ -229,9 +229,38 @@
     </div>
 </div>
 
-<div class="modal" id="modalConstraint" >
+<div class="modal " id="modalConstraint" >
     <div class="constrainModalContent" id="constrainModalContent">
+        <div class="headConstraint">
+            <label id="labelConstraint" class="labelConstraint">Create new Constraint</label>
+        </div>
+        <hr>
+        <div class="featuresConstraintModal" id="featuresConstraintModal">
 
+        </div>
+        <hr>
+        <div class="operationsConstraint">
+            <input class="btn btn-primary" onclick="createConstraint('And')" type="submit" value="And">
+            <input class="btn btn-primary" onclick="createConstraint('Or')" type="submit" value="Or">
+            <input class="btn btn-primary" type="submit" value="Not">
+            <input class="btn btn-primary" type="submit" value="Implies">
+            <input class="btn btn-primary" type="submit" value="If">
+            <input class="btn btn-primary" type="submit" value="(">
+            <input class="btn btn-primary" type="submit" value=")">
+
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="formControlTextarea">Constraint</label>
+            <input type="text" class="form-control" id="inputConstraint" name="name"
+                   placeholder="Constraint" >
+
+<!--            <textarea class="form-control" id="formControlTextarea" rows="1"></textarea>-->
+        </div>
+
+        <input class="createConstraint btn btn-success" type="submit" value="Create Constraint">
+
+        <input class="destoryModelConstraint btn btn-danger" type="submit" value="Cancel">
     </div>
 </div>
 

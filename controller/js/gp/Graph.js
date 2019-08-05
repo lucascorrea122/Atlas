@@ -278,20 +278,16 @@ Graph.prototype.clearGraph = function () {
 // Dynamic Check Box
 
 function setCheckBox(){
-
   var list = grafo.getFeatureNames();
-
-
-    for (var i = 0; i < list.length; i++) {
+  for (var i = 0; i < list.length; i++) {
       createCheckBox(list[i]);
     }
-
 }
 
 function createCheckBox(name){
 
   if(typeof(name) === "string"){
-    var modal = document.getElementById("constrainModalContent");
+    var modal = document.getElementById("featuresConstraintModal");
 
     var div = document.createElement("div");
     var label = document.createElement("label");
@@ -317,6 +313,16 @@ function createCheckBox(name){
 function funcao1 (){
    alert("NÃO É UMA STRING");
 }
+
+function createConstraint(valor) {
+  var textArea = document.getElementById("formControlTextarea");
+  var x = document.getElementById("inputConstraint");
+  var string = x.value + " ";
+  var constraint = string+valor;
+
+  x.setAttribute("value", constraint);
+}
+
 
 
 //

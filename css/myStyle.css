@@ -17,6 +17,7 @@
     width: 100%;
     height: 100%;
     background-color: transparent;
+    /*background-color: red;*/
     z-index: 5;
 }
 
@@ -91,21 +92,66 @@ select {
 /*==================================Constraint==================================*/
 
 .constrainModalContent{
-    margin-top: 400px;
+    margin-top: 140px;
     margin-left: 400px;
     position: fixed;
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    display: block;
-
-
+    background-color: rgb(226, 255, 156);
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
 
 }
 
+.constrainModalContent .labelConstraint{
+    font-family: Verdana;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.constrainModalContent #labelConstraint{
+    /*margin: 0 auto;*/
+    /*margin-left: 112px;*/
+}
 
 
+.featuresConstraintModal{
+    /*background-color: red;*/
+    /*position: fixed;*/
+    height: 100px;
+}
 
+.createConstraint{
+    /*float: right;*/
+    margin-left: 20px;
+}
+
+.destoryModelConstraint{
+    float: right;
+    margin-right: 20px;
+}
+.center{
+    /*background-color: green;*/
+    position: relative;
+    float: left;
+    margin: 3px;
+    display: inline-block;
+}
+
+.constrainModalContent hr{
+    clear: left;
+}
+.operationsConstraint{
+    clear: left;
+    text-align: center;
+}
+
+.headConstraint{
+    text-align: center;
+}
+
+#inputConstraint{
+    height: 50px;
+}
 
 /*==================================File==================================*/
 

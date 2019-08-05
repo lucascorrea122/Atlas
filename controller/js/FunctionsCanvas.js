@@ -191,7 +191,7 @@ function main(container) {
             menu.addItem('Create Constraint', null, function () {
                 var list = grafo.getAllFeatures();
                 if (list.length == 0){
-                    alert("oi")
+                     alert("There are no features in the model.");
                 }else {
                     showPopUp(modalConstraint);
                     setCheckBox();
