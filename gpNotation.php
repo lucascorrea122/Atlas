@@ -63,6 +63,10 @@
     <!--mxgraphs specifics imports-->
     <script src="controller/mxgraph/mxClient.js"></script>
 
+    <script>
+        document.getElementById('featureName2').focus();
+    </script>
+
 </head>
 
 <body onload="main(document.getElementById('graphContainer'))">
@@ -179,13 +183,13 @@
     </li>
 </div>
 
-<div class="modal modalFeature" id="modalFeature">
+<div class="modal modalFeature" id="modalFeature" >
     <div id="featureModalContent" class="featureModalContent form-group">
         <div class="closeButton">
             <a onclick="closePopUp(modalFeature);" href="javascript:void(0);"><i class="fa fa-times"></i></a>
         </div>
         <label><b>Feature Name</b></label>
-        <input class="form-control" id="featureName2" type="text" name="Fname" value="">
+        <input class="form-control" id="featureName2" type="text" name="Fname" >
         <label><b>Feature type</b></label>
         <select class="form-control" id="featureType2">
             <option value="mandatory">Mandatory</option>
@@ -194,9 +198,11 @@
         </select>
         <p></p>
         <button class="btn" id="createFeatureSubmitButton"
+
                 onclick="createFeature(featureName2.value,featureType2.value)"
                 type="submit">Create
         </button>
+
     </div>
 </div>
 
