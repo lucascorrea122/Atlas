@@ -246,11 +246,11 @@
         <div class="operationsConstraint">
             <input class="btn btn-primary" onclick="createConstraint('And')" type="submit" value="And">
             <input class="btn btn-primary" onclick="createConstraint('Or')" type="submit" value="Or">
-            <input class="btn btn-primary" type="submit" value="Not">
-            <input class="btn btn-primary" type="submit" value="Implies">
-            <input class="btn btn-primary" type="submit" value="If">
-            <input class="btn btn-primary" type="submit" value="(">
-            <input class="btn btn-primary" type="submit" value=")">
+            <input class="btn btn-primary" onclick="createConstraint('Not')"  type="submit" value="Not">
+            <input class="btn btn-primary" onclick="createConstraint('Implies')"type="submit" value="Implies">
+            <input class="btn btn-primary" onclick="createConstraint('if')" type="submit" value="If">
+            <input class="btn btn-primary" onclick="createConstraint('(')" type="submit" value="(">
+            <input class="btn btn-primary" onclick="createConstraint(')')" type="submit" value=")">
 
         </div>
         <hr>
@@ -259,12 +259,12 @@
             <input type="text" class="form-control" id="inputConstraint" name="name"
                    placeholder="Constraint" >
 
-<!--            <textarea class="form-control" id="formControlTextarea" rows="1"></textarea>-->
+
         </div>
 
         <input class="createConstraint btn btn-success" type="submit" value="Create Constraint">
 
-        <input class="destoryModelConstraint btn btn-danger" type="submit" value="Cancel">
+        <input class="destoryModelConstraint btn btn-danger" type="submit" value="Cancel" onclick="closePopUp(modalConstraint)">
     </div>
 </div>
 

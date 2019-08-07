@@ -222,12 +222,8 @@ function main(container) {
     };
 
     window.addEventListener("keydown", checkKeyPress, false);
-// The parameters of the event listener are event, function to run, useCapture (optional).
-// This event listener runs checkKeyPress function when a key is pressed down
-// You can use keydown or keyup to check what key has been pressed or released
 
 
-// this function checks to see if the letter 'a' key has been pressed
     function checkKeyPress(key) {
         if (key.keyCode == "113") {
             closePopUp(modalAssociation);
@@ -242,6 +238,7 @@ function main(container) {
 
 
     }
+
 
 
     adjustSizes();

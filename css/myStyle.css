@@ -92,10 +92,10 @@ select {
 /*==================================Constraint==================================*/
 
 .constrainModalContent{
-    margin-top: 140px;
-    margin-left: 400px;
+    margin-top: 180px;
+    margin-left: 550px;
     position: fixed;
-    background-color: rgb(226, 255, 156);
+    background-color: rgb(255, 253, 254);
     width: 450px;
     height: 450px;
     border-radius: 10px;
@@ -403,7 +403,7 @@ li {
     margin-top: 70px;
     background: #fff;
     z-index: 1;
-    opacity: .9;
+    /*opacity: .9;*/
 }
 
 #graphContainer {
