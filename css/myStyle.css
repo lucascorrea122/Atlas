@@ -403,7 +403,7 @@ li {
     margin-top: 70px;
     background: #fff;
     z-index: 1;
-    opacity: .9;
+    /*opacity: .9;*/
 }
 
 #graphContainer {

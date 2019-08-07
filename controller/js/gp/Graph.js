@@ -281,6 +281,7 @@ function setCheckBox(){
   var list = grafo.getFeatureNames();
   for (var i = 0; i < list.length; i++) {
       createCheckBox(list[i]);
+
     }
 }
 
@@ -297,9 +298,13 @@ function createCheckBox(name){
 
     input.setAttribute("type", "checkbox");
     input.setAttribute("class", "form-check-input");
+    input.setAttribute("value", name);
+    input.setAttribute("onclick", "getValueConstraint()");
+    input.setAttribute("id", name);
+    // input.setAttribute("on")
 
     label.innerHTML = name;
-    // label.setAttribute("class", "form-check-input");
+
 
     div.appendChild(input);
     div.appendChild(label);
@@ -311,17 +316,44 @@ function createCheckBox(name){
 }
 
 function funcao1 (){
-   alert("NÃO É UMA STRING");
+   alert("Not String, report to Developer");
 }
 
 function createConstraint(valor) {
   var textArea = document.getElementById("formControlTextarea");
   var x = document.getElementById("inputConstraint");
+
   var string = x.value + " ";
+  // var feature = getValueConstraint();
   var constraint = string+valor;
 
   x.setAttribute("value", constraint);
 }
+
+function getValueConstraint() {
+  var checks = document.getElementsByClassName("form-check-input");
+
+  for(i=0; i<grafo.listFeatures.length; i++){
+      if (checks[i].checked === true){
+         console.log(checks[i].value);
+        createConstraint(checks[i].value);
+        // var id = checks[i].value;
+        // id.checked = false;
+        checks[i].setAttribute("disabled", true);
+
+        if(checks[i].checked){
+          checks[i].checked = false;
+        }
+        // break;
+
+      }
+
+  }
+}
+
+
+
+
 
 
 

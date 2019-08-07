@@ -261,7 +261,7 @@
             <input type="text" class="form-control" id="inputConstraint" name="name"
                    placeholder="Constraint" >
 
-<!--            <textarea class="form-control" id="formControlTextarea" rows="1"></textarea>-->
+
         </div>
 
         <input class="createConstraint btn btn-success" type="submit" value="Create Constraint">
