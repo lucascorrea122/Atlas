@@ -63,9 +63,7 @@
     <!--mxgraphs specifics imports-->
     <script src="controller/mxgraph/mxClient.js"></script>
 
-    <script>
-        document.getElementById('featureName2').focus();
-    </script>
+
 
 </head>
 

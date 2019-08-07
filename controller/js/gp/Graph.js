@@ -52,6 +52,7 @@ Graph.prototype.getFeaturesById = function (id) {
   return result;
 };
 
+
 Graph.prototype.getVertexByValue = function (value) {
   var result;
   var list = grafo.model
@@ -134,6 +135,8 @@ Graph.prototype.getFeaturesByVertex = function (vertex) {
   }
   return result;
 };
+
+
 
 Graph.prototype.getNoParent = function () {
   var result = [];

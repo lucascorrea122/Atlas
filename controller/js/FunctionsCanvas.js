@@ -156,18 +156,6 @@ function main(container) {
     });
 
 
-    mxGraphModel.prototype.beginUpdate = function()
-    {
-        this.updateLevel++;
-        if(mxEvent == 113){
-            alert("oi");
-        }
-
-
-    };
-
-
-    
 
     // Configures automatic expand on mouseover
     graph.popupMenuHandler.autoExpand = true;
@@ -176,6 +164,23 @@ function main(container) {
     graph.popupMenuHandler.factoryMethod = function (menu, cell, evt) {
         if (cell != null) {
             if (grafo.model.getModel().isVertex(cell)) {
+                menu.addItem('New Feature Mandatory', null, function () {
+                    var newFeature = createFeature(prompt("Please enter your name:", "Feature Name"),"mandatory");
+
+                    
+
+                    grafo.createAssociation(cell.value, );
+                });
+                menu.addItem('New Feature Optional', null, function () {
+                    var newFeature = createFeature(prompt("Please enter your name:", "Feature Name"),"optional");
+
+                });
+
+                menu.addItem('New Feature Alternative', null, function () {
+                    var newFeature = createFeature(prompt("Please enter your name:", "Feature Name"),"alternative");
+
+                });
+
                 menu.addItem('Make Mandatory', null, function () {
                     changeTypeFeature([cell], 'mandatory');
                 });
