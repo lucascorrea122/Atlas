@@ -337,8 +337,7 @@ function getValueConstraint() {
       if (checks[i].checked === true){
          console.log(checks[i].value);
         createConstraint(checks[i].value);
-        // var id = checks[i].value;
-        // id.checked = false;
+
         checks[i].setAttribute("disabled", true);
 
         if(checks[i].checked){
@@ -349,7 +348,7 @@ function getValueConstraint() {
       }
 
   }
-}
+}''
 
 
 
