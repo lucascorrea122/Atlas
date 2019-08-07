@@ -164,20 +164,20 @@ function main(container) {
     graph.popupMenuHandler.factoryMethod = function (menu, cell, evt) {
         if (cell != null) {
             if (grafo.model.getModel().isVertex(cell)) {
-                menu.addItem('New Feature Mandatory', null, function () {
-                    var newFeature = createFeature(prompt("Please enter your name:", "Feature Name"),"mandatory");
+                menu.addItem('New Mandatory Feature', null, function () {
+                    var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"mandatory");
 
                     
 
                     grafo.createAssociation(cell.value, );
                 });
-                menu.addItem('New Feature Optional', null, function () {
-                    var newFeature = createFeature(prompt("Please enter your name:", "Feature Name"),"optional");
+                menu.addItem('New Optional Feature', null, function () {
+                    var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"optional");
 
                 });
 
-                menu.addItem('New Feature Alternative', null, function () {
-                    var newFeature = createFeature(prompt("Please enter your name:", "Feature Name"),"alternative");
+                menu.addItem('New Alternative Feature ', null, function () {
+                    var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"alternative");
 
                 });
 
