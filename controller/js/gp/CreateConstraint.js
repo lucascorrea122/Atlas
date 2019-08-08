@@ -32,7 +32,7 @@ function createConstraintt(name, type) {
         } finally {
 
             grafo.model.getModel().endUpdate();
-
+            uncheckedBox();
 
         }
         layout.execute(grafo.model.getDefaultParent());

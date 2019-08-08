@@ -377,7 +377,7 @@ function getConstraint() {
 
   var string =  constraint.value;
   constraint.setAttribute("value", '');
-  uncheckedBox();
+
   return string;
 }
 
