@@ -167,7 +167,6 @@ function main(container) {
                 menu.addItem('New Mandatory Feature', null, function () {
                     var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"mandatory");
 
-                    
                 });
                 menu.addItem('New Optional Feature', null, function () {
                     var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"optional");
@@ -223,13 +222,12 @@ function main(container) {
 
 
     function checkKeyPress(key) {
-        if (key.keyCode == "113") {
-            closePopUp(modalAssociation);
-            showPopUp(modalFeature);
-            document.getElementById('featureName2').focus();
-        }else if(key.keyCode == "115") {
-            closePopUp(modalFeature);
-            showPopUp(modalAssociation);
+        if (key.keyCode == "49") {
+            var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"mandatory");
+        }else if(key.keyCode == "50") {
+            var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"optional");
+        }else if(key.keyCode == "51") {
+            var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"alternative");
         }
 
 
