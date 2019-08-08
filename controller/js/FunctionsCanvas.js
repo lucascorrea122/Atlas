@@ -168,8 +168,6 @@ function main(container) {
                     var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"mandatory");
 
                     
-
-                    grafo.createAssociation(cell.value, );
                 });
                 menu.addItem('New Optional Feature', null, function () {
                     var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"optional");
