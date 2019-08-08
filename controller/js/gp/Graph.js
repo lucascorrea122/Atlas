@@ -336,22 +336,52 @@ function createConstraint(valor) {
 function getValueConstraint() {
   var checks = document.getElementsByClassName("form-check-input");
 
-  for(i=0; i<grafo.listFeatures.length; i++){
-      if (checks[i].checked === true){
-         console.log(checks[i].value);
-        createConstraint(checks[i].value);
-        // var id = checks[i].value;
-        // id.checked = false;
-        checks[i].setAttribute("disabled", true);
+  for (i = 0; i < grafo.listFeatures.length; i++) {
+    if (checks[i].checked === true) {
+      console.log(checks[i].value);
+      createConstraint(checks[i].value);
 
-        if(checks[i].checked){
-          checks[i].checked = false;
-        }
-        // break;
+      checks[i].setAttribute("disabled", true);
 
+      if (checks[i].checked) {
+        checks[i].checked = false;
       }
+      // b
+
+    }
 
   }
+}
+
+ function uncheckedBox() {
+   var checks = document.getElementsByClassName("form-check-input");
+
+   for (i = 0; i < grafo.listFeatures.length; i++) {
+     if (checks[i].disabled) {
+
+       checks[i].removeAttribute("disabled", false);
+
+       if (checks[i].checked) {
+         checks[i].checked = false;
+       }
+       // break;
+
+     }
+
+   }
+
+ }
+
+
+
+
+function getConstraint() {
+  var constraint = document.getElementById("inputConstraint");
+
+  var string =  constraint.value;
+  constraint.setAttribute("value", '');
+
+  return string;
 }
 
 
