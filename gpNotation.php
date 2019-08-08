@@ -51,6 +51,7 @@
     <script src="controller/js/gp/CreateFeature.js"></script>
     <script src="controller/js/gp/AlternativeAssociation.js"></script>
     <script src="controller/js/gp/ChangeType.js"></script>
+    <script src="controller/js/gp/CreateConstraint.js"></script>
 
     <!--general imports-->
     <script src="controller/js/FunctionBezierCurve.js"></script>
@@ -59,6 +60,7 @@
     <script src="controller/js/Download.js"></script>
     <script src="controller/js/SavePng.js"></script>
     <script src="controller/js/FunctionsCanvas.js"></script>
+
 
     <!--mxgraphs specifics imports-->
     <script src="controller/mxgraph/mxClient.js"></script>
@@ -264,9 +266,9 @@
 
         </div>
 
-        <input class="createConstraint btn btn-success" type="submit" value="Create Constraint">
+        <input class="createConstraint btn btn-success" type="submit" value="Create Constraint" onclick="createConstraintt(getConstraint(), 'constraint');">
 
-        <input class="destoryModelConstraint btn btn-danger" type="submit" value="Cancel" onclick="closePopUp(modalConstraint)">
+        <input class="destoryModelConstraint btn btn-danger" type="submit" value="Close" onclick="closePopUp(modalConstraint)">
     </div>
 </div>
 

@@ -333,22 +333,53 @@ function createConstraint(valor) {
 function getValueConstraint() {
   var checks = document.getElementsByClassName("form-check-input");
 
-  for(i=0; i<grafo.listFeatures.length; i++){
-      if (checks[i].checked === true){
-         console.log(checks[i].value);
-        createConstraint(checks[i].value);
+  for (i = 0; i < grafo.listFeatures.length; i++) {
+    if (checks[i].checked === true) {
+      console.log(checks[i].value);
+      createConstraint(checks[i].value);
 
-        checks[i].setAttribute("disabled", true);
+      checks[i].setAttribute("disabled", true);
 
-        if(checks[i].checked){
-          checks[i].checked = false;
-        }
-        // break;
-
+      if (checks[i].checked) {
+        checks[i].checked = false;
       }
+      // b
+
+    }
 
   }
-}''
+}
+
+ function uncheckedBox() {
+   var checks = document.getElementsByClassName("form-check-input");
+
+   for (i = 0; i < grafo.listFeatures.length; i++) {
+     if (checks[i].disabled) {
+
+       checks[i].removeAttribute("disabled", false);
+
+       if (checks[i].checked) {
+         checks[i].checked = false;
+       }
+       // break;
+
+     }
+
+   }
+
+ }
+
+
+
+
+function getConstraint() {
+  var constraint = document.getElementById("inputConstraint");
+
+  var string =  constraint.value;
+  constraint.setAttribute("value", '');
+  uncheckedBox();
+  return string;
+}
 
 
 
