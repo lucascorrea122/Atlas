@@ -389,7 +389,6 @@ function getConstraint() {
 
 
 
-
 //
 // Graph.prototype.insertORalternative = function (child, alternatives) {
 //

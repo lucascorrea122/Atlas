@@ -18,7 +18,7 @@ function createFeature(name, type) {
   var feature, feature2;
   var x;
   var y;
-
+  setWithFeature(name);
 
 
 
@@ -33,7 +33,7 @@ function createFeature(name, type) {
             name,
             10,
             setY(),
-            80,
+            setWithFeature(name),
             30,
             "mandatory"
         );
@@ -61,7 +61,7 @@ function createFeature(name, type) {
             name,
             10,
             setY(),
-            80,
+              setWithFeature(name),
             30,
             "optional"
           );
@@ -88,7 +88,7 @@ function createFeature(name, type) {
             name,
             10,
             setY(),
-            80,
+              setWithFeature(name),
             30,
             "alternative"
           );
@@ -249,6 +249,14 @@ function draw() {
     grafo.organizeGraph();
 
   }
+}
+
+
+
+function setWithFeature(name) {
+ var stringLength = name.length;
+ var count = 10 * stringLength;
+ return count;
 }
 
 
