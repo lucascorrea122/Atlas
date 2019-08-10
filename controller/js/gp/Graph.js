@@ -298,6 +298,7 @@ function createCheckBox(name){
     var input = document.createElement("input");
 
     div.setAttribute("class" , "form-check center");
+    div.setAttribute("id" , "divFeatureID");
 
     input.setAttribute("type", "checkbox");
     input.setAttribute("class", "form-check-input");

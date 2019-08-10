@@ -16,14 +16,14 @@ function createConstraintt(name, type) {
                         name,
                         1400,
                         setYConstraint(),
-                        300,
+                        setWithFeature(name),
                         30,
                         "mandatory"
                     );
 
 
                     feature = new Feature(vertex);
-                    grafo.addFeature(feature);
+
 
                     break;
 
@@ -82,6 +82,7 @@ function createStyles() {
     style[mxConstants.STYLE_FONTCOLOR] = "black";
     style[mxConstants.STYLE_FONTSIZE] = 15;
     style[mxConstants.STYLE_RESIZABLE] = false;
+
     grafo.model.stylesheet.putCellStyle("mandatory", style);
     grafo.model.stylesheet.putCellStyle("optional", style);
     grafo.model.stylesheet.putCellStyle("alternative", style);
@@ -164,15 +165,7 @@ function setYConstraint() {
 
 
 function setXConstraint() {
-    var noEdge = [];
-    var features = grafo.model
-        .getModel()
-        .getChildVertices(grafo.model.getDefaultParent());
-    for (var i = 0; i < features.length; i++) {
-        if (features[i].edges == null) {
-            noEdge.push(features[i]);
-        }
-    }
+
     if (
         grafo.model.getModel().getChildVertices(grafo.model.getDefaultParent())
             .length > 0

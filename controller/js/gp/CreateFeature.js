@@ -18,7 +18,6 @@ function createFeature(name, type) {
   var feature, feature2;
   var x;
   var y;
-  setWithFeature(name);
 
 
 

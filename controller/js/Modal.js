@@ -1,16 +1,33 @@
-function closePopUp(modal){
+function closePopUp(modal) {
+
     modal.style.display = "none";
+
+}
+
+function closeAndRemoveFeature(modal) {
+    var list = grafo.getFeatureNames();
+    closePopUp(modal);
+    for (var i = 0; i < list.length; i++) {
+        var div = document.getElementById("divFeatureID");
+        div.parentNode.removeChild(div);
+
+    }
+    var constraint = document.getElementById("inputConstraint");
+    constraint.setAttribute("value", '');
+
+
+
 }
 
 function showPopUp(modal) {
-  layout.execute(grafo.model.getDefaultParent());
+    layout.execute(grafo.model.getDefaultParent());
 
-  grafo.organizeGraph();
+    grafo.organizeGraph();
 
-  modal.style.display = "block";
+    modal.style.display = "block";
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
 
     if (event.target == document.getElementById('modalAssociation')) {
         document.getElementById('modalAssociation').style.display = "none";
@@ -20,7 +37,7 @@ window.onclick = function(event) {
         document.getElementById('modalFeature').style.display = "none";
     }
     if (event.target == document.getElementById('modalConstraint')) {
-        document.getElementById('modalConstraint').style.display = "none";
+        closeAndRemoveFeature(modalConstraint);
     }
 }
 
