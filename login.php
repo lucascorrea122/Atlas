@@ -5,18 +5,30 @@ include_once("connection.php");
 $email = $_POST['loginEmail'];
 $password = $_POST['loginPassword'];
 
-$stm = "SELECT COUNT(email) AS counter FROM users WHERE email='$email' ";
+
+
+$stm = "SELECT email from users WHERE email=('$email')";
+
 $query = mysqli_query($connection, $stm);
+$row = mysqli_num_rows($query);
 
-$array = mysqli_fetch_array($query);
 
-if ($array['counter'] > 0){
-    header('Location: dashboard.php');
+if($row > 0){
+    $stmPassword = "SELECT user_password from users WHERE email=('$email')";
+    $queryPassword = mysqli_query($connection, $stmPassword);
+    $percorer = mysqli_fetch_array($queryPassword);
+    $word = $percorer['user_password'];
+
+    if (password_verify($password, $word)) {
+        echo "password correct <br/><br/><br/><br/>";
+    } else {
+        echo "password incorret ";
+    }
 }else{
-    header('Location: gpNotation.php');
+    echo "Usuário Inexistente";
 }
 
-$stmt->close();
+
 mysqli_close($connection);
 
 ?>
