@@ -156,18 +156,6 @@ function main(container) {
     });
 
 
-    mxGraphModel.prototype.beginUpdate = function()
-    {
-        this.updateLevel++;
-        if(mxEvent == 113){
-            alert("oi");
-        }
-
-
-    };
-
-
-    
 
     // Configures automatic expand on mouseover
     graph.popupMenuHandler.autoExpand = true;
@@ -176,6 +164,20 @@ function main(container) {
     graph.popupMenuHandler.factoryMethod = function (menu, cell, evt) {
         if (cell != null) {
             if (grafo.model.getModel().isVertex(cell)) {
+                menu.addItem('New Mandatory Feature', null, function () {
+                    var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"mandatory");
+
+                });
+                menu.addItem('New Optional Feature', null, function () {
+                    var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"optional");
+
+                });
+
+                menu.addItem('New Alternative Feature ', null, function () {
+                    var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"alternative");
+
+                });
+
                 menu.addItem('Make Mandatory', null, function () {
                     changeTypeFeature([cell], 'mandatory');
                 });
@@ -220,13 +222,12 @@ function main(container) {
 
 
     function checkKeyPress(key) {
-        if (key.keyCode == "113") {
-            closePopUp(modalAssociation);
-            showPopUp(modalFeature);
-            document.getElementById('featureName2').focus();
-        }else if(key.keyCode == "115") {
-            closePopUp(modalFeature);
-            showPopUp(modalAssociation);
+        if (key.keyCode == "49") {
+            var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"mandatory");
+        }else if(key.keyCode == "50") {
+            var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"optional");
+        }else if(key.keyCode == "51") {
+            var newFeature = createFeature(prompt("Feature Name:", "Feature Name"),"alternative");
         }
 
 

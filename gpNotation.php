@@ -65,9 +65,7 @@
     <!--mxgraphs specifics imports-->
     <script src="controller/mxgraph/mxClient.js"></script>
 
-    <script>
-        document.getElementById('featureName2').focus();
-    </script>
+
 
 </head>
 
@@ -268,7 +266,7 @@
 
         <input class="createConstraint btn btn-success" type="submit" value="Create Constraint" onclick="createConstraintt(getConstraint(), 'constraint');">
 
-        <input class="destoryModelConstraint btn btn-danger" type="submit" value="Close" onclick="closePopUp(modalConstraint)">
+        <input class="destoryModelConstraint btn btn-danger" type="submit" value="Close" onclick="closeAndRemoveFeature(modalConstraint)">
     </div>
 </div>
 
