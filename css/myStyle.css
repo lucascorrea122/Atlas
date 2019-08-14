@@ -130,7 +130,7 @@ select {
     margin-right: 20px;
 }
 .center{
-    background-color: green;
+    /*background-color: green;*/
     position: relative;
     float: left;
     margin: 3px;
@@ -497,27 +497,62 @@ a:hover .tooltip {
 
 /*==========================================================================*/
 
-.register {
-    background-color: rgb(255, 255, 255, 0.9);
-    height: 550px;
-    margin-left: 200px;
-    margin-right: 200px;
-
-}
 
 /*===============  Form Register  ===================*/
 
+.registerLogin{
+    /*width: 900px;*/
+    /*float: left;*/
+    margin-top: 110px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.register .labelFormRegister{
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-family: "Comic Sans MS";
+    font-size: 27px;
+}
+
+
+
 .register {
     background-color: rgb(255, 255, 255, 0.9);
-    height: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
     margin-top: 20px;
+    height: 550px;
+    width: 550px;
+    margin: 10px;
+    border-radius: 10px;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+    /*-webkit-align-items: center;*/
+    /*align-items: center;*/
+
 }
 
 .register .formRegister{
     /*margin: 0 auto;*/
-    margin-left: 200px;
+    margin-left: 75px;
+    margin-top: 60px;
+
+}
+
+
+.registerLogin .formLogin{
+    margin-top: 50px;
+
+}
+#registerInputArea{
+    margin-left: 0px;
 }
 
 .formRegister #registerInputName {
@@ -541,8 +576,20 @@ a:hover .tooltip {
 }
 
 .register .btn{
-    margin-left: 200px;
+    margin-left: 220px;
+    margin-top: 20px;
+    width: 100px;
+
 }
 
 
+/*===============  About  ===================*/
+
+.about{
+    background-color: #ffeee7;
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
 

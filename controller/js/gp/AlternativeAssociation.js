@@ -32,7 +32,7 @@ function makeAlternativeAssociation(feature) {
             feature.name +
 
 
-             "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', associ[0], associ[associ.length-1],'edgeStyle=roundedStyle;curved=1')"
+             "= grafo.model.insertEdge(grafo.model.getDefaultParent(), null, '', associ[0], associ[associ.length-1],'edgeStyle=roundedStyle;curved=1;strokeColor=red; stroke-width=6')"
           );
         eval(
           "AlterAssoc" +

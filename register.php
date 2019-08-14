@@ -26,7 +26,7 @@ include_once("connection.php");
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
 
-    <script src="processes.js"> </script>
+    <script src="processes.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
@@ -40,7 +40,7 @@ include_once("connection.php");
 <body>
 <div class="myNav">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="home.php">Atlas</a>
+        <a class="navbar-brand" href="home.php">WebAtlas</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,93 +60,101 @@ include_once("connection.php");
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Atlas Repository </a>
+                    <a class="nav-link" href="webAtlasRepository.php">Atlas Repository </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdownMymenu dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about.php">About </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
                 <a id="btnSignIn" href="register.php" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</a>
-                <a  onclick="myFunction(loginUser)" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</a>
+                <a href="register.php"  class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</a>
+
+
 
             </form>
         </div>
     </nav>
 
 
-
 </div>
 
-<div class="register" id="registerUser">
-    <form method="post" action="processes.php">
-        <div class="formRegister form-group" >
-            <label class="name">Name</label>
-            <input type="text" class="form-control" id="registerInputName" name="name" maxlength="40" required
-                   aria-describedby="name" placeholder="Your Name">
 
-            <label Class="FormControlSelect">Select an area</label>
-            <select class="form-control" id="registerInputArea" name="selectArea">
-                <option> Select </option>
-                <?php
-                $query_levels_acess = "SELECT * FROM levels_acess";
-                $result_levels_acess = mysqli_query($connection, $query_levels_acess);
-                while ($row_levels_acess = mysqli_fetch_assoc($result_levels_acess)) { ?>
-                    <option value="<?php echo $row_levels_acess['cod']; ?>">
+<div class="registerLogin">
+
+    <div class="register" id="loginUser">
+        <label class="labelFormRegister">Sign in to WebAtlas</label>
+        <div class="formLogin">
+            <form method="post" action="login.php">
+                <div class="formRegister form-group">
+                    <label class="email">Email</label>
+                    <input type="text" class="femailRegister form-control" id="registerInputEmail"
+                           aria-describedby="emailHelp" name="loginEmail"
+                           maxlength="40" placeholder="Your Email">
+
+                    <label class="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="registerInputPassword" placeholder="Your Password"
+                           name="loginPassword">
+
+
+                </div>
+                <button id="btnLogin" type="submit" class="btn btnLogin btn-primary">Login</button>
+            </form>
+        </div>
+
+
+    </div>
+
+
+    <div class="register" id="registerUser">
+        <label class="labelFormRegister">Create your personal account</label>
+        <div>
+            <form method="post" action="processes.php">
+                <div class="formRegister form-group">
+                    <label class="name">Name</label>
+                    <input type="text" class="form-control" id="registerInputName" name="name" maxlength="40" required
+                           aria-describedby="name" placeholder="Your Name">
+
+                    <label Class="FormControlSelect">Select an area</label>
+                    <select class="form-control" id="registerInputArea" name="selectArea">
+                        <option> Select</option>
                         <?php
-                        echo $row_levels_acess['name'];
+                        $query_levels_acess = "SELECT * FROM levels_acess";
+                        $result_levels_acess = mysqli_query($connection, $query_levels_acess);
+                        while ($row_levels_acess = mysqli_fetch_assoc($result_levels_acess)) { ?>
+                            <option value="<?php echo $row_levels_acess['cod']; ?>">
+                                <?php
+                                echo $row_levels_acess['name'];
+                                ?>
+
+                            </option>   <?php
+                        }
                         ?>
 
-                    </option>   <?php
-                }
-                ?>
+                    </select>
 
-            </select>
+                    <label class="email">Email</label>
+                    <input type="email" class="femailRegister form-control" id="registerInputEmail"
+                           aria-describedby="emailHelp" name="email"
+                           maxlength="40" placeholder="Your Email">
+                    <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone.
+                    </small>
 
-            <label class="email">Email</label>
-            <input type="email" class="femailRegister form-control" id="registerInputEmail" aria-describedby="emailHelp" name="email"
-                   maxlength="40" placeholder="Your Email">
-            <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone.</small>
-
-            <label class="inputPassword">Password</label>
-            <input type="password" class="form-control" id="registerInputPassword" placeholder="Your Password" name="password">
+                    <label class="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="registerInputPassword" placeholder="Your Password"
+                           name="password">
 
 
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary" >Submit</button>
-    </form>
+
+    </div>
 </div>
-
-<div class="register" id="loginUser">
-    <form method="post" action="login.php">
-        <div class="formRegister form-group">
-            <label class="email">Email</label>
-            <input type="text" class="femailRegister form-control" id="registerInputEmail" aria-describedby="emailHelp" name="loginEmail"
-                   maxlength="40" placeholder="Your Email">
-
-            <label class="inputPassword">Password</label>
-            <input type="password" class="form-control" id="registerInputPassword" placeholder="Your Password" name="loginPassword">
-
-
-        </div>
-        <button type="submit"  class="btn btn-primary" >Submit</button>
-    </form>
-
-</div>
-
 
 
 </body>
