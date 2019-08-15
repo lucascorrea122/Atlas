@@ -586,10 +586,26 @@ a:hover .tooltip {
 /*===============  About  ===================*/
 
 .about{
-    background-color: #ffeee7;
-    width: 900px;
+    background-color: #fffdfe;
+    width: 1200px;
     margin: 0 auto;
     margin-top: 100px;
+    font-family: "Comic Sans MS";
 
 }
 
+.textAbout{
+    font-family: "Comic Sans MS";
+    overflow: auto;
+    margin-top: 35px;
+}
+
+.iconsAbout{
+    font-size: 25px;
+    color: grey;
+}
+
+.imgAbout{
+    float: right;
+
+}
