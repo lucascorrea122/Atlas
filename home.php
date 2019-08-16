@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <html>
 
 <head>
@@ -58,23 +63,35 @@
                     <a class="nav-link" href="about.php">About </a>
                 </li>
 
-
+            <?php
+            if (!isset($_SESSION['user'])):
+            ?>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <label id="labelName"> </label>
                 <a id="btnSignIn" href="register.php" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</a>
                 <a href="register.php"  class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</a>
 
-
-
             </form>
+            <?php
+            endif;
+            if(isset($_SESSION['user'])):
+                ?>
+
+                 <?php echo 'Welcome ' .$_SESSION['user']  ?>
+                <a href="destroySession.php"  class="btn btn-outline-success my-2 my-sm-0" type="submit">Logouts</a>
+
+            <?php
+            endif;
+
+            ?>
         </div>
     </nav>
 
 
 </div>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="myCausel carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -82,13 +99,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
+            <img class="d-block w-100" src="Models/img1.png" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
+            <img class="d-block w-100" src="Models/img2.png" alt="Second slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
+            <img class="d-block w-100" src="Models/img3.png" alt="Third slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

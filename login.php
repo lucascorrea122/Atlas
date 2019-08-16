@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once("connection.php");
 
 $email = $_POST['loginEmail'];
@@ -14,15 +14,21 @@ $row = mysqli_num_rows($query);
 
 
 if($row > 0){
-    $stmPassword = "SELECT user_password from users WHERE email=('$email')";
+    $stmPassword = "SELECT * from users WHERE email=('$email')";
     $queryPassword = mysqli_query($connection, $stmPassword);
     $percorer = mysqli_fetch_array($queryPassword);
-    $word = $percorer['user_password'];
+    $pass = $percorer['user_password'];
+    $name = $percorer['name'];
 
-    if (password_verify($password, $word)) {
-        echo "password correct <br/><br/><br/><br/>";
+    if (password_verify($password, $pass)) {
+        header('Location: home.php');
+        $_SESSION['user'] = $name;
+        echo $_SESSION['user'];
+        session_destroy(['noUser']);
     } else {
-        echo "password incorret ";
+
+        $_SESSION['noUser']= true;
+        exit();
     }
 }else{
     echo "Usuário Inexistente";
